@@ -1,9 +1,11 @@
 
 h1{    font-family:'Raleway', sans-serif	;}
 
-p
+
+
+body
 {
-    color: blue;
+    color: black;
 /*    font-size: 14px; /* Paragraphes de 14 pixels */
     font-size: 1.0em;
     font-family:'Raleway', sans-serif	;
