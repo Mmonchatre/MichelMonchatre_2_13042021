@@ -5,13 +5,17 @@
 
 header {
     display: flex;
+
     align-items: center;
+    overflow:hidden;
+
 }
 
 header nav {
     margin: 20px;
     padding: 20px;
 }
+
 body
 {
     background-color: white;
@@ -42,7 +46,8 @@ body
     width: 50px; 
     background-color: #DEEBFF;
     border-radius: 50%; 
-      margin: -3px;
+    margin-top: -2px;
+    margin-left: -2px;
 <!--		text-align:center;
     vertical-align: middle; -->
 } 
@@ -51,12 +56,31 @@ body
 	font-size: 20px;
 	margin:10px;
 	}
+
+.libelle_image {
+    font-weight: 700;
+    font-size: 20px;
+    margin:10px;
+}
 	
 	i { 
 	color: #0065FC;
 	align-items: center;
 	}
+
+
     
+.champ_recherche{
+    display: flex;
+    width: 200px;
+    background-color: white;
+    height: 46px;
+    border-radius: 25px;	
+    align-items: center;
+    text-align:center;	    
+    border: 2px solid #d9d9d9;
+    margin: 20px;
+}
     .bandeau_filtre {
         display: flex ;
         width: 100%;
@@ -67,21 +91,28 @@ body
         justify-content: space-around;
         }
 		
-	.filterButton {
+	.bouton_filtre {
 		display: flex;
 		margin: auto;
 		background-color: white;
 		height: 46px;
-		border-radius: 23px;
+		border-radius: 25px;
 		text-align:center;	
 		border: 2px solid #d9d9d9;
 		}
 	
+        .bouton_filtre:hover {
+            box-shadow: 10px 10px 5px grey;
+            background-color: #b3c7e2;
+        }
 
 .hebergements
 {display: flex
 }
 .sub_hebergements {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     background-color: #F2F2F2;
     width: 66%;
     border-radius: 15px;
@@ -89,15 +120,45 @@ body
     padding: 10px;
 }
 
+.image_sub_hebergement {
+	display: flex;
+	text-align:	 left;
+    justify-content: center;
+	width: 180px;
+	background-color: white;
+	overflow:hidden;
+	flex-direction:	column;	
+	border: 5px solid white;
+	border-radius: 15px;
+	margin: 10px;
+    font-weight: 400;
+	}
+
+
+    .image_populaire {
+        display: flex;
+        text-align:	 left;
+        justify-content: center;
+        width: 300px;
+        background-color: white;
+        overflow:hidden;
+        border: 5px solid white;
+        border-radius: 15px;
+        margin: 10px;
+        font-weight: 400;
+        } 
+
 .populaires
 {
     display: flex;
+    flex-direction: column;
     background-color: #F2F2F2;
     width: 33%;
     border-radius: 15px;
     margin: 10px;
     padding: 10px;
-}        
+}      
+ aside i { color: black}
 .activites
 {
     display: flex;
@@ -116,7 +177,7 @@ body
     width: 100%;
 }
 
-.imageactivite {
+.image_activite {
 	display: flex;
 	text-align:	 left;
     justify-content: center;

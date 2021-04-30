@@ -13,7 +13,8 @@
 
     <body>
         <header>
-            <img src="images/logo/Reservia.svg" alt="Logo du site" id="logo">
+
+            <img   src="images/logo/Reservia.svg" alt="Logo du site" id="logo">
             <nav>
                 <a href="#Hebergements">Hébergements</a>
                 <a href="#Activites">Activités</a>
@@ -26,12 +27,14 @@
                 <h2>Trouvez votre hébergement pour des vacances  de reve  </h2>
                 En plein centre ville ou en pleine nature
                 <p>
+                <div class="champ_recherche"><span><i class="fas fa-map-marker-alt"></i></span><INPUT TYPE=TEXT NAME='ville' /></div>
+
                 <div class="bandeau_filtre">
                     Filtres
-                    <div class="filterButton"> <span class="cercle"><i class="fas fa-money-bill-wave"></i></span><span class="libelle" >économique</span></div>
-                    <div class="filterButton"> <span class="cercle"><i class="fas fa-child"></i></span><span class="libelle" >familial</span></div>
-                    <div class="filterButton"> <span class="cercle"><i class="fas fa-dog"></i></span><span class="libelle" >animaux autorisés</span></div>
-                    <div class="filterButton"> <span class="cercle"><i class="fas fa-heart"></i></span><span class="libelle" >romantique</span></div>
+                    <div class="bouton_filtre"> <span class="cercle"><i class="fas fa-money-bill-wave"></i></span><span class="libelle" >économique</span></div>
+                    <div class="bouton_filtre"> <span class="cercle"><i class="fas fa-child"></i></span><span class="libelle" >familial</span></div>
+                    <div class="bouton_filtre"> <span class="cercle"><i class="fas fa-dog"></i></span><span class="libelle" >animaux autorisés</span></div>
+                    <div class="bouton_filtre"> <span class="cercle"><i class="fas fa-heart"></i></span><span class="libelle" >romantique</span></div>
                 </div>
             </section>
             
@@ -43,47 +46,62 @@
                 <section class=sub_hebergements>
                     <h2 id="Hebergements">Hebergements a Marseille</h2>
 
-                </section>
-                <aside class=populaires>
-                    <h2>les plus populaires</h2>
-                </aside>
-            </section>
-            
-            <section class="activites">
-                <h2 class=titre_section">Activités à Marseille</h2>
-              
-                <div class="imageactivite">
-                    <span>
-                        <img 	alt="oups pas d'image"
-                        src="./images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"
-                        width="240"
-                        height="150"></span><span class="libelleactivite">fort de Pomègues
-                    </span>
-                </div>
-                <div class="imageactivite">
-                    <span>
-                        <img 	alt="oups pas d'image"
-                            src="./images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"
-                            width="240"
-                            height="150"></span><span class="libelleactivite">fort de Pomègues
-                    </span>
-                </div>
-                <div class="imageactivite">
-                    <span>
-                        <img 	alt="oups pas d'image"
-                            src="./images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"
-                            width="240"
-                            height="150"></span><span class="libelleactivite">fort de Pomègues
-                    </span>
-                </div>
-                <div class="imageactivite">
+                    <div class="image_sub_hebergement">
                         <span>
                             <img 	alt="oups pas d'image"
                             src="./images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"
                             width="240"
-                            height="150"></span><span class="libelleactivite">fort de Pomègues
-                        </span>
+                            height="150"></span>
+                            <span class="libelle_image">fort de Pomègues</span>
+                            <span>Nuit à partir de 55€</span>
+                    </div>
+
+                </section>
+                <aside class=populaires>
+                    <h2>Les plus populaires <i class="fas fa-chart-line"></i>   </h2>
+                    <div class="image_populaire">
+                        <span>
+                            <img 	alt="oups pas d'image"
+                            src="./images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"
+                            width="240"
+                            height="150"></span>
+                            <span class="libelle_image">fort de Pomègues</span>
+                            <span>Nuit à partir de 55€</span>
+                    </div>
+                    <div class="image_populaire">
+                        <span>
+                            <img 	alt="oups pas d'image"
+                            src="./images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"
+                            width="240"
+                            height="150"></span>
+                            <span class="libelle_image">fort de Pomègues</span>
+                            <span>Nuit à partir de 55€</span>
+                    </div>
+                    <div class="image_populaire">
+                        <span>
+                            <img 	alt="oups pas d'image"
+                            src="./images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"
+                            width="240"
+                            height="150"></span>
+                            <span class="libelle_image">fort de Pomègues</span>
+                            <span>Nuit à partir de 55€</span>
+                    </div>
+                </aside>
+            </section>
+            
+            <section class="activites">
+                <h2 id="Activites">Activités à Marseille</h2>
+              
+                <div class="image_activite">
+                    <span>
+                        <img 	alt="oups pas d'image"
+                        src="./images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"
+                        width="240"
+                        height="150"></span><span class="libelle_image">fort de Pomègues
+                    </span>
                 </div>
+
+
                 
             </section>
             </div>
