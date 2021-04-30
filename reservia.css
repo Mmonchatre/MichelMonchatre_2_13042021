@@ -1,74 +1,37 @@
-
-h1{    font-family:'Raleway', sans-serif	;}
-
+/* reservia.css */
 * {
     font-family:'Raleway', sans-serif	;
 }
 
-bleu 
-{ 
-    color: #0065FC
+header {
+    display: flex;
+    align-items: center;
 }
 
-bleuclair 
-{ color: #DEEBFF
+header nav {
+    margin: 20px;
+    padding: 20px;
 }
-
-gris
-{ color:#F2F2F2}
-
 body
 {
     background-color: white;
     color: black;
-/*    font-size: 14px; /* Paragraphes de 14 pixels */
     font-size: 1.0em;
-    font-family:'Raleway', sans-serif	;
-    width: 100%;
+    width: 90%;
     text-align: justify;
-    padding: 12px; /* Marge intérieure de 12px */
 }
 
-
-section
+.sectionrecherche
 {
     display: inline-block;  
-    width: 50%;
     border: 1px;    
-    background-color: #DEEBFF;
+    background-color white;
     border-radius: 10px;
     border-width: 1px;
     margin: 10px;
     padding: 5px;
     vertical-align: top;
     margin-right: 2%;
-
-}
-
-ul
-{
-    list-style-type: none; /* suppression des puces*/
-}
-
-footer + ul
-{
-    border-radius: 15;
-
-}
-
-footer
-{background-color: #F2F2F2;
-    width: 85%;
-    border-radius: 10px;
-    padding: 10px;
-    
-}
-
-
-
-
-* {
-    font-family:'Raleway', sans-serif	;
 }
 
 .cercle { 
@@ -84,8 +47,6 @@ footer
     vertical-align: middle; -->
 } 
 
-
-
 .libelle {
 	font-size: 20px;
 	margin:10px;
@@ -93,16 +54,22 @@ footer
 	
 	i { 
 	color: #0065FC;
-			align-items: center;
+	align-items: center;
 	}
-	
+    
+    .bandeau_filtre {
+        display: flex ;
+        width: 100%;
+        flex-wrap: wrap;
+        font-size: 20px;
+        font-weight: 700;
+        align-items: center;
+        justify-content: space-around;
+        }
 		
 	.filterButton {
 		display: flex;
-		align-items: center;
-		font-size: 20px;
 		margin: auto;
-		<!-- width: 200px; -->
 		background-color: white;
 		height: 46px;
 		border-radius: 23px;
@@ -111,9 +78,78 @@ footer
 		}
 	
 
-.bandeauFilterButton {
-    display: flex ;
+.hebergements
+{display: flex
+}
+.sub_hebergements {
+    background-color: #F2F2F2;
+    width: 66%;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.populaires
+{
+    display: flex;
+    background-color: #F2F2F2;
+    width: 33%;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 10px;
+}        
+.activites
+{
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    }
+    background-color: white;
+    margin: 10px;
+}
+
+.sub_hebergements h2
+{
+    width: 100%;
+}
+.activites h2
+{
+    width: 100%;
+}
+
+.imageactivite {
+	display: flex;
+	text-align:	 left;
+    justify-content: center;
+	width: 240px;
+	background-color: white;
+	overflow:hidden;
+	flex-direction:	column;	
+	border: 5px solid white;
+	border-radius: 15px;
+	box-shadow: 10px 10px 5px grey;
+	margin: 10px;
+    font-weight: 700;
+	}
+
+
+.libelle_activite {
+    margin: 20px;
+    font-size: 15px;
+    font-weight: 700;
+}
+        
     
+footer
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    background-color: #F2F2F2;
+    padding: 10px; 
+    margin-top: 20px;
+}
+
+footer ul
+{
+    list-style-type: none;
+}

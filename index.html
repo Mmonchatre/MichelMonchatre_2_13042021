@@ -5,75 +5,112 @@
         <link rel="stylesheet" href="reservia.css" />
         <title>MM site Reservia</title>
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-
-    <!-- Place your kit's code here -->
-    <script src="https://kit.fontawesome.com/e9e2ad4a22.js" crossorigin="anonymous"></script>
-
+         <!-- polices Raleway 400 et 700 -->
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+        <!-- icones -->
+        <script src="https://kit.fontawesome.com/e9e2ad4a22.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
-    <!-- Ready to use Font Awesome. Activate interlock. Dynotherms - connected. Infracells - up. Icons are go! -->
-    
-    <header>
+        <header>
             <img src="images/logo/Reservia.svg" alt="Logo du site" id="logo">
+            <nav>
+                <a href="#Hebergements">Hébergements</a>
+                <a href="#Activites">Activités</a>
+            </nav>
+            <a href="https://mmonchatre.github.io/#">S'inscrire</a>
+        </header>
 
-            <a href="#Hebergements">Hébergements</a>
-            <a href="#Activites">Activités</a> 
-        S'inscrire
-    </header>
-
-
-        <h2>Trouvez votre hébergement pour des vacances  de reve  </h2>
-        En plein centre ville ou en pleine nature
-
-        <p>
-        <div class="bandeauFilterButton">
-            <div class="filterButton"> <span class="cercle"><i class="fas fa-money-bill-wave"></i></span><span class="libelle" >économique</span></div>
-            <div class="filterButton"> <span class="cercle"><i class="fas fa-child"></i></span><span class="libelle" >familial</span></div>
-            <div class="filterButton"> <span class="cercle"><i class="fas fa-dog"></i></span><span class="libelle" >animaux autorisés</span></div>
-            <div class="filterButton"> <span class="cercle"><i class="fas fa-heart"></i></span><span class="libelle" >romantique</span></div>
-        </div>
-
-        
-         </p>
-        info : plus de 500 logements dans cette ville
-        <div id="contenu">
-            <section>
-                <h2 id="Hebergements">Hebergements a Marseille</h2>
+        <main>
+            <section class="recherche">
+                <h2>Trouvez votre hébergement pour des vacances  de reve  </h2>
+                En plein centre ville ou en pleine nature
+                <p>
+                <div class="bandeau_filtre">
+                    Filtres
+                    <div class="filterButton"> <span class="cercle"><i class="fas fa-money-bill-wave"></i></span><span class="libelle" >économique</span></div>
+                    <div class="filterButton"> <span class="cercle"><i class="fas fa-child"></i></span><span class="libelle" >familial</span></div>
+                    <div class="filterButton"> <span class="cercle"><i class="fas fa-dog"></i></span><span class="libelle" >animaux autorisés</span></div>
+                    <div class="filterButton"> <span class="cercle"><i class="fas fa-heart"></i></span><span class="libelle" >romantique</span></div>
+                </div>
             </section>
-            <br>
-            <section>
-              les plus populaires
-            </section>
-            <br>
             
-            <section>
-                <h2 id="Activites">Activités à Marseille</h2>
+            <section class="infos">
+                info : plus de 500 logements dans cette ville
+            </section>
+            
+            <section class="hebergements">
+                <section class=sub_hebergements>
+                    <h2 id="Hebergements">Hebergements a Marseille</h2>
+
+                </section>
+                <aside class=populaires>
+                    <h2>les plus populaires</h2>
+                </aside>
+            </section>
+            
+            <section class="activites">
+                <h2 class=titre_section">Activités à Marseille</h2>
+              
+                <div class="imageactivite">
+                    <span>
+                        <img 	alt="oups pas d'image"
+                        src="./images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"
+                        width="240"
+                        height="150"></span><span class="libelleactivite">fort de Pomègues
+                    </span>
+                </div>
+                <div class="imageactivite">
+                    <span>
+                        <img 	alt="oups pas d'image"
+                            src="./images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"
+                            width="240"
+                            height="150"></span><span class="libelleactivite">fort de Pomègues
+                    </span>
+                </div>
+                <div class="imageactivite">
+                    <span>
+                        <img 	alt="oups pas d'image"
+                            src="./images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"
+                            width="240"
+                            height="150"></span><span class="libelleactivite">fort de Pomègues
+                    </span>
+                </div>
+                <div class="imageactivite">
+                        <span>
+                            <img 	alt="oups pas d'image"
+                            src="./images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"
+                            width="240"
+                            height="150"></span><span class="libelleactivite">fort de Pomègues
+                        </span>
+                </div>
+                
             </section>
             </div>
             
-<br>
+ 
 
+        </main> 
+        <!-- Footer-->
         <footer>
             <h3>A Propos</h3>
             <ul>
-                <li>Fonctionnement du site</li>
-                <li>Conditions generales de ventes</li>
-                <li>Données et Confidentialités</li>
+                <li>Fonctionnement du site</a></li>
+                <li>Conditions generales de ventes</a></li>
+                <li>Données et Confidentialités</a></li>
             </ul>
             <h3>Nos Hébergements</h3>
             <ul>
-                <li>Charte Qualité</li>
-                <li>Soumettre votre hotel</li>
+                <li>Charte Qualité</a></li>
+                <li>Soumettre votre hotel</a></li>
             </ul>
             <h3>Assistance</h3>
             <ul>
-                <li>Centre d'aide</li>
-                <li>Nous contacter</li>
+                <li><a href="https://mmonchatre.github.io/#">Centre d'aide</a></li>
+                <li><a href="mailto:votrenom@bidule.com">Nous contacter</a></li>
             </ul>
         </footer>
 
 
-</body>
+    </body>
 </html>
