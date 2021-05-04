@@ -1,50 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="reservia.css" />
         <title>MM site Reservia</title>
         <link rel="preconnect" href="https://fonts.gstatic.com">
          <!-- polices Raleway 400 et 700 -->
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
         <!-- icones -->
         <script src="https://kit.fontawesome.com/e9e2ad4a22.js" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
     <body>
         <header>
 
             <img   src="images/logo/Reservia.svg" alt="Logo du site" id="logo">
-            <nav>
-                <a href="#Hebergements">Hébergements</a>
-                <a href="#Activites">Activités</a>
-            </nav>
-            <a href="https://mmonchatre.github.io/#">S'inscrire</a>
+            <div id="header_menu">
+                <nav>
+                    <ul>
+                        <li><a href="#Hebergements">Hébergements</a></li>
+                        <li><a href="#Activites">Activités</a></li>
+                    </ul>
+                </nav>
+                <span><a href="https://mmonchatre.github.io/#">S'inscrire</a></span>
+            </div>
         </header>
 
         <main>
             <section class="recherche">
                 <h2>Trouvez votre hébergement pour des vacances  de reve  </h2>
                 En plein centre ville ou en pleine nature
-                <p>
-                <div class="champ_recherche"><span><i class="fas fa-map-marker-alt"></i></span><INPUT TYPE=TEXT NAME='ville' /></div>
+            
+                <div class="champ_recherche"><span  class="bouton_recherche_gauche "><i class="fas fa-map-marker-alt" ></i></span><INPUT TYPE=TEXT NAME='ville' value="Marseille, France"/><span><button>Rechercher</button></span></div> 
 
-                <div class="bandeau_filtre">
-                    Filtres
-                    <div class="bouton_filtre"> <span class="cercle"><i class="fas fa-money-bill-wave"></i></span><span class="libelle" >économique</span></div>
-                    <div class="bouton_filtre"> <span class="cercle"><i class="fas fa-child"></i></span><span class="libelle" >familial</span></div>
-                    <div class="bouton_filtre"> <span class="cercle"><i class="fas fa-dog"></i></span><span class="libelle" >animaux autorisés</span></div>
-                    <div class="bouton_filtre"> <span class="cercle"><i class="fas fa-heart"></i></span><span class="libelle" >romantique</span></div>
+                <div id="bandeau_filtre">
+                    <div>Filtres</div>
+                    <div class="bouton_filtre"> <span class="cercle"><i class="fas fa-money-bill-wave"></i></span><span class="libelle" >Economique</span></div>
+                    <div class="bouton_filtre"> <span class="cercle"><i class="fas fa-child"></i></span><span class="libelle" >Familial</span></div>
+                    <div class="bouton_filtre"> <span class="cercle"><i class="fas fa-heart"></i></span><span class="libelle" >Romantique</span></div>
+                    <div class="bouton_filtre"> <span class="cercle"><i class="fas fa-dog"></i></span><span class="libelle" >Animaux autorisés</span></div>
                 </div>
             </section>
-            
-            <section class="infos">
-                info : plus de 500 logements dans cette ville
-            </section>
+       
+            <p >
+                       
+                <div class="infos">
+                    <span>
+                        <span class="cercle_icone_info">
+                            <i class="fas fa-info" ></i>
+                        </span>
+                    </span>
+                    <span>Plus de 500 logements sont disponibles dans cette ville</span>
+                </div>
+
+            </p>
             
             <section class="hebergements">
-                <section class=sub_hebergements>
-                    <h2 id="Hebergements">Hebergements a Marseille</h2>
+               <section class=sub_hebergements>
+                    <h2 id="Hebergements">Hebergements à Marseille</h2>
 
                     <div class="image_sub_hebergement">
                         <span>
@@ -63,25 +77,6 @@
                         <span>
                             <img 	alt="oups pas d'image"
                             src="./images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"
-                            width="240"
-                            height="150"></span>
-                            <span class="libelle_image">fort de Pomègues</span>
-                            <span>Nuit à partir de 55€</span>
-                    </div>
-                    <div class="image_populaire">
-                        <span>
-                            <img 	alt="oups pas d'image"
-                            src="./images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"
-                            width="240"
-                            height="150"></span>
-                            <span class="libelle_image">fort de Pomègues</span>
-                            <span>Nuit à partir de 55€</span>
-                    </div>
-                    <div class="image_populaire">
-                        <span>
-                            <img 	alt="oups pas d'image"
-                            src="./images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"
-                            width="240"
                             height="150"></span>
                             <span class="libelle_image">fort de Pomègues</span>
                             <span>Nuit à partir de 55€</span>
@@ -92,41 +87,77 @@
             <section class="activites">
                 <h2 id="Activites">Activités à Marseille</h2>
               
+ 
                 <div class="image_activite">
                     <span>
-                        <img 	alt="oups pas d'image"
-                        src="./images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"
-                        width="240"
-                        height="150"></span><span class="libelle_image">fort de Pomègues
+                        <img 	alt="oups pas d'image" src="./images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" width: 20% height="150px">
+                    </span>
+                    <span class="libelle_image">
+                        Fort de Pomègues
+                    </span>
+                </div>
+                <div class="image_activite">
+                    <span>
+                        <img 	alt="oups pas d'image" src="./images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" width: 20% height="150px">
+                    </span>
+                    <span class="libelle_image">
+                        Fort de Pomègues
+                    </span>
+                </div>
+                <div class="image_activite">
+                    <span>
+                        <img 	alt="oups pas d'image" src="./images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" width: 20% height="150px">
+                    </span>
+                    <span class="libelle_image">
+                        Fort de Pomègues
+                    </span>
+                </div>
+                <div class="image_activite">
+                    <span>
+                        <img 	alt="oups pas d'image" src="./images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" width: 20% height="150px">
+                    </span>
+                    <span class="libelle_image">
+                        Fort de Pomègues
+                    </span>
+                </div>
+                <div class="image_activite">
+                    <span>
+                        <img 	alt="oups pas d'image" src="./images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" width: 20% height="150px">
+                    </span>
+                    <span class="libelle_image">
+                        Fort de Pomègues
                     </span>
                 </div>
 
-
-                
             </section>
-            </div>
             
  
 
         </main> 
         <!-- Footer-->
         <footer>
-            <h3>A Propos</h3>
-            <ul>
-                <li>Fonctionnement du site</a></li>
-                <li>Conditions generales de ventes</a></li>
-                <li>Données et Confidentialités</a></li>
-            </ul>
-            <h3>Nos Hébergements</h3>
-            <ul>
-                <li>Charte Qualité</a></li>
-                <li>Soumettre votre hotel</a></li>
-            </ul>
+            <div class="footer-item">
+                <h3>A Propos</h3>
+                <ul>
+                    <li>Fonctionnement du site</li>
+                    <li>Conditions generales de ventes</li>
+                    <li>Données et Confidentialités</li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h3>Nos Hébergements</h3>
+                <ul>
+                <li>Charte Qualité</li>
+                <li>Soumettre votre hotel</li>
+                </ul>
+            </div>
+            <div class="footer-item">
             <h3>Assistance</h3>
             <ul>
                 <li><a href="https://mmonchatre.github.io/#">Centre d'aide</a></li>
                 <li><a href="mailto:votrenom@bidule.com">Nous contacter</a></li>
             </ul>
+            </div>
         </footer>
 
 
