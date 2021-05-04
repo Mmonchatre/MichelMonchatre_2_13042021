@@ -105,10 +105,10 @@ main {
     margin-right: 30px;
 		}
 
-.libelle_image {
+.libelle_images {
     font-weight: 700;
     font-size: 20px;
-    margin:10px;
+    
 }
 	
 	i { 
@@ -199,7 +199,8 @@ main {
 
 .hebergements
 {
-    display: flex
+    display: flex;
+    height: 800px;
 }
 
 .sub_hebergements {
@@ -210,7 +211,7 @@ main {
     width: 66%;
     border-radius: 15px;
     margin: 10px;
-    padding: 10px;
+ 
 }
 
 
@@ -219,21 +220,39 @@ main {
     width: 100%;
     margin: 10px;
 }
-.image_sub_hebergement {
+
+
+.hebergement {
 	display: flex;
+    flex-direction:	column;	
 	text-align:	 left;
-    justify-content: center;
-	width: 180px;
-	background-color: white;
+    width: 250px;
+    Background-color: white;
 	overflow:hidden;
-	flex-direction:	column;	
 	border: 5px solid white;
 	border-radius: 15px;
-	margin: 10px;
+	margin: 5px;
     font-weight: 400;
-	}
+    height: 270px;
+}
+
+.hebergement img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+
+.sub_hebergements p {
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+
 
 /* colonne populaire */
+
 
 .populaires
 {
@@ -244,8 +263,9 @@ main {
     border-radius: 15px;
     margin: 10px;
     padding: 10px;
+
 }   
-.image_populaire {
+.populaire {
     display: flex;
     text-align:	 left;
     justify-content: center;
@@ -258,27 +278,52 @@ main {
     font-weight: 400;
     } 
 
-   
- aside i { color: black}
+.populaire_description {
+        
+        display:flex;
+        flex-direction: column;
+        margin-left: 10px;
+    }
+.populaires img {
+        width: 240px;
+        height: 150px;
+        object-fit: cover;
+    }
 
- .populaires h2 {
+    aside i { 
+    color: black
+}
+
+.populaires h2 {
     display: flex;
     width: 90%;
     justify-content: space-between;
     margin-left: 10px;
-    }
+   }
+
+/* changement de couleurs des etoiles */
+
+.hebergement  i, .populaire_description i {
+    color:blue
+}
+.hebergement:nth-child(2) i:nth-child(5) , .hebergement:nth-child(4) i:nth-child(5), .hebergement:nth-child(5) i:nth-child(5) , .hebergement:nth-child(5) i:nth-child(4), .hebergement:nth-child(6) i:nth-child(5) {
+    color: #DEEBFF;
+}
+.populaire:nth-child(3) i:nth-child(5) , .populaire:nth-child(4) i:nth-child(5)   {
+    color: #DEEBFF;
+}
+
 
  /* definition de la section activité */
-
- 
-
- .activites
+  .activites
 {
+    height: 600px;
     display: flex;
+    align-content: flex-start;
     flex-wrap: wrap;
-    justify-content: space-between;
     background-color: white;
     margin: 10px;
+    overflow:hidden;
 }
 
 .activites h2
@@ -286,12 +331,13 @@ main {
     width: 100%;
 }
 
-.image_activite {
+.activite {
 	display: flex;
+    flex-direction: column;
+    align-items: center;
 	text-align:	 left;
     justify-content: center;
-	width: 20%;
-    max-height: 200px;
+	    /* max-height: 200px; */
 	background-color: white;
 	overflow:hidden;
 	flex-direction:	column;	
@@ -303,10 +349,57 @@ main {
 	}
 
 .libelle_activite {
-    margin: 20px;
-    font-size: 15px;
     font-weight: 700;
+    height: 30px;
+    font-size: 20px;
+    margin:10px;
 }
+
+.activite:nth-child(2){
+    width: 20%;
+    height: 500px;
+}
+
+.activite:nth-child(3){
+    width: 20%;
+    height: 290px;
+}
+
+.activite:nth-child(3) img {
+    height: 230px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.activite:nth-child(4){
+    width: 20%;
+    height: 290px;
+    }
+
+
+.activite:nth-child(4) img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.activite:nth-child(5){
+    width: 20%;
+    height: 500px;
+}
+
+.activite:nth-child(6){
+    width: 20%;
+    height: 290px;
+}
+
+.activite:nth-child(7){
+    width: 20%;
+    height: 290px;
+}
+
+
         
  /* definition du pied de page */
 
@@ -337,3 +430,6 @@ footer .footer-item ul {
        align-items: flex-start;
 }
 
+header, header #header_menu {
+    flex-direction: column;
+}
