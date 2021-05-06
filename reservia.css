@@ -10,49 +10,60 @@ body
     font-size: 16px;
     width: 100%;
     max-width: 1440px;
-    min-width: 250px;
+    min-width: 375px;
     text-align: justify;
     margin: 0px;
+}
+
+header, main {
     padding-left: 50px;
     padding-right: 50px;
 }
 
+
 header {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
-    overflow:hidden;
+    /* overflow:hidden; */
     font-weight:500;
 }
 
-
-
 #header_menu {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     }
 
 header nav {
-
-    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
 }
 
-header span a {
-        padding-right: 50px;
+header img  {
+    justify-content:left;
 }
 
 nav ul {
     display: flex;
+    text-align: end;
     list-style: none;
-
-    justify-content: space-between;
+/*    justify-content: space-between; */
 }
-
 nav li {
     padding-left: 40px;
     padding-right: 40px;
-
 }
+
+header nav a {
+    justify-content: right;
+    padding-right: 50px;
+}
+
+
+
 /* definition de la section recherche */
 
 main {
@@ -210,7 +221,7 @@ i {
     justify-content: space-around;
     background-color: #F2F2F2;
     width: 880px;
-    min-width: 500px;
+    min-width: 375px;
     border-radius: 15px;
     padding: 25px;
     margin-right: 40px;  
@@ -266,8 +277,8 @@ i {
     border-radius: 15px;
     padding-left: 25px;
     padding-right: 25px;
-    
 }
+
 
 .populaire {
     display: flex;
@@ -285,7 +296,14 @@ i {
 .populaire_description {
     display:flex;
     flex-direction: column;
+    justify-content: space-between;
     margin-left: 10px;
+}
+
+.populaire_description span i {
+    /*vertical-align: bottom; */
+    text-align: right;
+    align-content: flex-end;
 }
 
 .populaire img {
@@ -425,29 +443,51 @@ footer .footer-item ul {
 @media screen and (max-width: 380px) {
 
 
-.bandeau_filtre, footer { 
-    flex-direction: column;
-       align-items: flex-start;
+    .bandeau_filtre, footer { 
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header, header #header_menu, {
+        flex-direction: column;
+    }
+
+    body {
+        margin: auto;
+    }
+
+    /*centrer tous les elements avec image en largeur */
+
+    header, main {
+        padding-left: 0px;
+        padding-right: 0px;
+        /* align-content: center; */
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* faire passer les populaires avant les hebergements */
+
+    
+    /* dans le header : premiere ligne  logo et "s'inscrire" ; deuxieme = navigation */
+
+    /* dans la recherche , changer le mot rechercher par la loupe avec encadrement radius */
+
+    /* les tailles d'images des activités sont les memes que pour les populaires     */
+    .activite_format1 img , .activite_format2 img , .activite_format3 img {
+        width: 100%;
+        height: 135px;
+    }
+/* background hebergement blanc */
+    .sub_hebergements {
+        background-color: white;
+    }
+
+/* ombrage des etiquettes de hebergements */
+
+.hebergement {
+    box-shadow: 10px 10px 5px grey;
 }
-
-header, header #header_menu, {
-    flex-direction: column;
-}
-
-body {
-    margin: auto
-}
-
-/*centrer tous les elements avec image en largeur */
-
-
-/* faire passer les populaires avant les hebergements */
-
-/* dans le header : faire une premiere ligne avec le lodo et s'inscrire et une deuxieme avec la navigation */
-
-/* dans la recherche , changer le pmot rechercher par la loupe avec encadrement radius */
-
-/* les tailles d'images sont les memes pour  toutes les activités. */
-
 
 }
