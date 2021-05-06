@@ -7,10 +7,12 @@ body
 {
     background-color: white;
     color: black;
-    font-size: 1.0em;
+    font-size: 16px;
     width: 100%;
     max-width: 1440px;
+    min-width: 250px;
     text-align: justify;
+    margin: 0px;
     padding-left: 50px;
     padding-right: 50px;
 }
@@ -31,8 +33,8 @@ header {
     }
 
 header nav {
-    padding-left: 90px;
-    padding-right: 90px;
+
+    justify-content: space-between;
 }
 
 header span a {
@@ -41,13 +43,16 @@ header span a {
 
 nav ul {
     display: flex;
-
-}
-nav li {
     list-style: none;
+
+    justify-content: space-between;
 }
 
+nav li {
+    padding-left: 40px;
+    padding-right: 40px;
 
+}
 /* definition de la section recherche */
 
 main {
@@ -66,17 +71,59 @@ main {
    /* margin-right: 2%; */
 }
 
-.cercle { 
-  display: flex;
+
+.champ_recherche{
+    display: flex;
+    font-size: 20px;
+    height: 46px;
     align-items: center;
-    justify-content: center;
+    text-align:center;	    
+    margin-top: 20px; 
+    margin-bottom: 20px;
+}
+
+.champ_recherche input { 
+    height: 44px;
+    border: 2px solid #d9d9d9; 
+    background-color: white;
+    font-weight: 700;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+
+
+  
+.champ_recherche button {
+    border :none ;
+    font-weight: 700;
+    font-size: 20px;
+    height: 50px;
+    border-radius: 0px 15px 15px 0px   ;
+    background-color: blue;
+    color: white;
+    padding-left: 30px;
+    padding-right: 30px;
+ }
+
+ .bouton_recherche_gauche { 
+	display: flex;
+    align-items: center;
+	justify-content: center;
+	width: 50px;
     height: 50px; 
-    width: 50px; 
-    background-color: #DEEBFF;
-    border-radius: 50%; 
-    margin-top: 0px;
-    margin-left: -2px;
+    background-color: #d9d9d9;
+    color: black;
+    border-radius: 15px 0px 0px 15px   ;  
 } 
+
+.champ_recherche .bouton_recherche_gauche INPUT {
+    margin-left: 10px;
+}
+.champ_recherche .bouton_recherche_gauche i {
+    color: black;
+}
+
 
 .cercle_icone_info {
     display: flex;
@@ -111,55 +158,6 @@ i {
 	align-items: center;
 }
 
-.champ_recherche{
-    display: flex;
-    font-size: 20px;
-    height: 46px;
-    align-items: center;
-    text-align:center;	    
-    margin-top: 20px; 
-    margin-bottom: 20px;
-}
-
-.champ_recherche input { 
-    height: 44px;
-    border: 2px solid #d9d9d9; 
-    background-color: white;
-    font-weight: 700;
-    font-size: 20px;
-    padding-left: 20px;
-}
-
-.champ_recherche button {
-    border :none ;
-    font-weight: 700;
-    font-size: 20px;
-    height: 50px;
-    border-radius: 0px 15px 15px 0px   ;
-    background-color: blue;
-    color: white;
-    padding-left: 30px;
-    padding-right: 50px;
- }
-
- .bouton_recherche_gauche { 
-	display: flex;
-    align-items: center;
-	justify-content: center;
-	width: 50px;
-    height: 50px; 
-    background-color: #d9d9d9;
-    color: black;
-    border-radius: 15px 0px 0px 15px   ;  
-} 
-
-.champ_recherche .bouton_recherche_gauche INPUT {
-    margin-left: 10px;
-}
-.champ_recherche .bouton_recherche_gauche i {
-    color: black;
-}
-
 #bandeau_filtre {
     display: flex ;
     width: 100%;
@@ -168,7 +166,19 @@ i {
     font-weight: 700;
     align-items: center;
 }
-		
+
+.cercle_filtre { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px; 
+    width: 50px; 
+    background-color: #DEEBFF;
+    border-radius: 50%; 
+    margin-top: 0px;
+    margin-left: -2px;
+} 
+
 .bouton_filtre {
 	display: flex;
 	background-color: white;
@@ -181,35 +191,39 @@ i {
 }
 	
 .bouton_filtre:hover {
-        box-shadow: 10px 10px 5px grey;
-        background-color: #b3c7e2;
+    box-shadow: 10px 10px 5px grey;
+    background-color: #b3c7e2;
 }
 
 /* definition de la section herbergement */
 
 .hebergements {
     display: flex;
+    flex-wrap: wrap;
     /* height: 800px; */
-    
-
+    height: fit-content;
 }
 
 .sub_hebergements {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: #F2F2F2;
-    width: 75%;
+    width: 880px;
     min-width: 500px;
     border-radius: 15px;
-    padding-left: 40px;
-    padding-right: 40px;
-    margin-right: 40px; 
-}
+    padding: 25px;
+    margin-right: 40px;  
+    }
+
+.sub_hebergements,  .populaires {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 
 .sub_hebergements h2 {
     width: 100%;
-    margin: 10px;
+    padding-left: 25px;
 }
 
 .hebergement {
@@ -222,7 +236,7 @@ i {
 	overflow:hidden;
 	border: 5px solid white;
 	border-radius: 15px;
-	/* margin: 5px;*/
+	margin: 20px;
     font-weight: 400;
     height: 190px;
 }
@@ -236,7 +250,7 @@ i {
 .sub_hebergements p {
     font-weight: 700;
     font-size: 20px;
-    margin-left: 20px;
+  margin-left: 20px;
     width: 100%;
 }
 
@@ -245,25 +259,26 @@ i {
 .populaires {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     background-color: #F2F2F2;
-    width: 25%; 
-    min-width: 400px;
+    /* width: 420px33; */
+    min-width: 300px;
     border-radius: 15px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 25px;
+    padding-right: 25px;
+    
 }
 
 .populaire {
     display: flex;
     text-align:	 left;
-    justify-content: center;
-    width: 332px;
-    heigt: 135px;
+    width: 340px;
+    height: 135px;
     background-color: white;
     overflow:hidden;
     border: 5px solid white;
     border-radius: 15px;
-    margin: 10px;
+    margin: 15px;
     font-weight: 400;
 } 
 
@@ -273,10 +288,13 @@ i {
     margin-left: 10px;
 }
 
-.populaires img {
-    width: 240px;
-    height: 150px;
+.populaire img {
+    max-width: 130px;
+    width: 100%;
+    height: 135px;
     object-fit: cover;
+    /*justify-content: left; */
+    align-items: left;
 }
 
 aside i {
@@ -306,35 +324,50 @@ aside i {
  /* definition de la section activité */
 .activites {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     align-content: space-between;
     background-color: white;
-    width: 1340px;
+    max-width: 1340px; */
     overflow:hidden;
-    min-width: 500px;
-
+/*    min-width: 500px;
+/*    height: 500px; */
 }
+
 
 .activites h2 {
     width: 100%;
 }
 
-.activite {
+
+#colonnes_activites {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;    
+} 
+
+.colonne_activites_1, .colonne_activites_2 , .colonne_activites_3 , .colonne_activites_4 {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align:	 left;
-    width: 290px;
-    min-width: 290px;
+}
+ 
+
+
+.activite_format1 , .activite_format2 , .activite_format3 , .activite_format4 {
+    display: flex;
+    flex-direction: column;
+    text-align: left; 
+    width: 304px;
+    min-width: 304px;
     justify-content: center;
     background-color: white;
     overflow:hidden;
 	border: 5px solid white;
 	border-radius: 15px;
-	box-shadow: 10px 10px 5px grey;
-	margin-right: 39px;
+	box-shadow: 5px 5px 5px grey;
+	margin-bottom: 30px;
     font-weight: 700;
-	}
+}
 
 .libelle_activite {
     font-weight: 700;
@@ -343,47 +376,29 @@ aside i {
     margin:10px;
 }
 
-.activite:nth-child(2){
-    width: 20%;
-    height: 500px;
-}
-
-.activite:nth-child(3){
-    width: 20%;
-    height: 290px;
-}
-
-.activite:nth-child(3) img {
-    height: 230px;
-    width: 100%;
+.activite_format1  img  {
+    /* width: 19%; */
+    height: 400px;
     object-fit: cover;
-}
-
-.activite:nth-child(4){
-    width: 20%;
-    height: 290px;
-    }
-
-.activite:nth-child(4) img {
     width: 100%;
-    height: 230px;
+}
+
+.activite_format2  img  {
+    /* width: 19%; */
+    height: 190px;
     object-fit: cover;
+    width: 100%;
 }
 
-.activite:nth-child(5){
-    width: 20%;
-    height: 500px;
+.activite_format3  img  {
+    /* width: 19%; */
+    height: 120px;
+    object-fit: cover;
+    width: 100%;
 }
 
-.activite:nth-child(6){
-    width: 20%;
-    height: 290px;
-}
 
-.activite:nth-child(7){
-    width: 20%;
-    height: 290px;
-}
+
 
 /* definition du pied de page */
 
@@ -407,7 +422,7 @@ footer .footer-item ul {
 
 /* modification associées au site responsive */
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 380px) {
 
 
 .bandeau_filtre, footer { 
@@ -415,9 +430,15 @@ footer .footer-item ul {
        align-items: flex-start;
 }
 
-header, header #header_menu, .hebergements {
+header, header #header_menu, {
     flex-direction: column;
 }
+
+body {
+    margin: auto
+}
+
+/*centrer tous les elements avec image en largeur */
 
 
 /* faire passer les populaires avant les hebergements */
@@ -426,7 +447,7 @@ header, header #header_menu, .hebergements {
 
 /* dans la recherche , changer le pmot rechercher par la loupe avec encadrement radius */
 
-/* les tailles d'images sont les memes pour  toutes les activités.
+/* les tailles d'images sont les memes pour  toutes les activités. */
 
 
 }
