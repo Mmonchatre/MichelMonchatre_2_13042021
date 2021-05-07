@@ -520,24 +520,15 @@ footer .footer-item ul {
     .hebergements .populaires {
         order: 1;
         } 
-
-
-    /* dans la recherche , changer le mot rechercher par la loupe avec encadrement radius */
-
-    /* <div class="champ_recherche"><span  class="bouton_recherche_gauche ">
-    <i class="fas fa-map-marker-alt" ></i>
-    </span><INPUT TYPE=TEXT NAME='ville' value="Marseille, France"/>
-    <span><button>Rechercher</button></span></div>  
+    .hebergements .sub_hebergements {
+            order: 2;
+            } 
     
-    */
 
-    /*.champ_recherche button {
-        content: "Bonjour Monde!";
-    }*/
 
+    /* dans le champ recherche , changer le mot rechercher par la loupe avec encadrement radius */
     .champ_recherche button {
         display: none;}   
-
 
     .champ_recherche .loupe_recherche {
         display:contents;
