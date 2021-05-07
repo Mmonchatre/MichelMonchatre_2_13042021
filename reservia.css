@@ -212,6 +212,7 @@ i {
 .hebergements {
     display: flex;
     flex-wrap: wrap; 
+    max-width: 1340px;
     justify-content: space-between;
     height: fit-content;
 }
@@ -221,21 +222,23 @@ i {
     flex-wrap: wrap;
     justify-content: space-around;
     background-color: #F2F2F2;
-    max-width: 800px; */
+    max-width: 800px;
     min-width: 375px;
     border-radius: 15px;
-    padding: 25px;
+    padding: 40px;
     /*margin-right: 40px;  */
     }
 
+    /*
 .sub_hebergements,  .populaires {
         margin-top: 20px;
         margin-bottom: 20px;
     }
+*/
 
 .sub_hebergements h2 {
     width: 100%;
-    padding-left: 25px;
+    padding-left: 0px;
 }
 
 .hebergement {
@@ -249,7 +252,7 @@ i {
 	overflow:hidden;
 	border: 5px solid white;
 	border-radius: 15px;
-    margin: 15px 0px 15px 0px; 
+    margin: 0px 0px 40px 0px; 
     font-weight: 400;
     
 }
@@ -313,8 +316,8 @@ i {
     width: 100%;
     height: 135px;
     object-fit: cover;
-    /*justify-content: left; */
-    align-items: left;
+    
+    
 }
 
 aside i {
@@ -348,10 +351,8 @@ aside i {
     flex-wrap: wrap;
     align-content: space-between;
     background-color: white;
-    max-width: 1340px; */
+    max-width: 1340px;
     overflow:hidden;
-/*    min-width: 500px;
-/*    height: 500px; */
 }
 
 
@@ -366,10 +367,15 @@ aside i {
     justify-content: space-between;    
 } 
 
-.colonne_activites_1, .colonne_activites_2 , .colonne_activites_3 , .colonne_activites_4 {
+/* .colonne_activites_1, .colonne_activites_2 , .colonne_activites_3 , .colonne_activites_4  */
+
+ #colonne_activites_2 , #colonne_activites_4 {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
+
  
 .activite_format1 , .activite_format2 , .activite_format3 , .activite_format4 {
     display: flex;
@@ -383,8 +389,8 @@ aside i {
 	border: 5px solid white;
 	border-radius: 15px;
 	box-shadow: 5px 5px 5px grey;
-    margin: 15px 0px 15px 0px; 
     font-weight: 700;
+    margin:10px 0px 10px 0px;
 }
 
 .libelle_activite {
@@ -448,7 +454,7 @@ footer .footer-item ul {
 
 /* dans le header : premiere ligne  logo et "s'inscrire" ; deuxieme = navigation */
 
-    header, header #header_menu, {
+    header, header #header_menu {
         flex-direction: column;
     }
 
