@@ -1,4 +1,5 @@
-/* reservia.css */
+/* reservia.css - definitions globales */
+
 * {
     font-family:'Raleway', sans-serif	;
 }
@@ -11,22 +12,34 @@ body
     width: 100%;
     max-width: 1440px;
     min-width: 375px;
-    text-align: justify;
+    /*text-align: justify; */
     margin: 0px;
 }
+
+main {
+    width: 100%;
+}
+
+i { 
+	color: #0065FC;
+	align-items: center;
+}
+
+/*header */
 
 header, main {
     padding-left: 50px;
     padding-right: 50px;
 }
 
-
 header {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    /* flex-wrap: wrap; 
     align-items: center;
     /* overflow:hidden; */
     font-weight:500;
+    height: 100px;
 }
 
 #header_menu {
@@ -39,43 +52,44 @@ header nav {
     flex-wrap: wrap;
     width: 100%;
     align-items: center;
-    
+    justify-content: space-between;
 }
 
-header img  {
-    justify-content:left;
+header #logo  {
+    float:left;
+    margin-left: 10px;
 }
 
-nav ul {
-    /* display: flex; */
-    width: 400px;
-    /*text-align: end; */
+header nav ul {
+    display: flex; 
+    justify-content: space-between;
+    /*flex-direction: row;*/
+    width: 300px;
     list-style: none;
-    margin-left: 400px;
-    /* justify-content: space-between; */
 }
+
+/*
 nav li {
     padding-left: 10px;
     padding-right: 10px;
+    height: 30px;
+
+}
+
+*/
+
+/* header nav ul li a:hover { */
+a:hover {
+    height: 30px;
+    border-top : 2px solid #0065FC;
+    
 }
 
 header nav a {
-    justify-content: right;
-    margin-right: 50px;
+    margin-right: 10px;  
     }
 
-
-
 /* definition de la section recherche */
-
-main {
-    width: 100%;
-}
-
-i { 
-	color: #0065FC;
-	align-items: center;
-}
 
 .recherche
 {
@@ -90,9 +104,11 @@ i {
    /* margin-right: 2%; */
 }
 
-
 .champ_recherche{
     display: flex;
+    border: 2px solid #d9d9d9; 
+    border-radius: 15px;
+    width: fit-content;
     font-size: 20px;
     height: 46px;
     align-items: center;
@@ -100,8 +116,6 @@ i {
     margin-top: 20px; 
     margin-bottom: 20px;
 }
-
-
  
 .bouton_recherche_gauche { 
 	display: flex;
@@ -110,7 +124,7 @@ i {
 	width: 50px;
     height: 50px; 
     background-color: #d9d9d9;
-    color: black;
+    /* color: black; */
     border-radius: 15px 0px 0px 15px   ;  
 } 
 
@@ -118,19 +132,22 @@ i {
     color: black;
  }
 
-.champ_recherche input { 
+.input_recherche { 
     height: 44px;
-    border: 2px solid #d9d9d9; 
     background-color: white;
+    border: 2px solid #d9d9d9; 
     font-weight: 700;
     font-size: 20px;
     padding-left: 20px;
     margin-left: -4px;
 }
 
+
+/* a supprimer
 .champ_recherche .bouton_recherche_gauche INPUT {
     margin-left: 10px;
 }
+*/
 
 .champ_recherche button  {
     border :none ;
@@ -334,12 +351,10 @@ i {
     max-width: 130px;
     width: 100%;
     height: 135px;
-    object-fit: cover;
-    
-    
+    object-fit: cover;    
 }
 
-aside i {
+.populaires i {
     color: black
 }
 
@@ -480,7 +495,7 @@ footer .footer-item ul {
 
 /* dans le header : premiere ligne  logo et "s'inscrire" ; deuxieme = navigation */
 
-    header, header #header_menu {
+    header  {
         flex-direction: column;
     }
 
@@ -490,6 +505,7 @@ footer .footer-item ul {
    
     header nav ul {
         margin-left: 0px;
+        justify-content: space-around;
         order: 3;
     }
 
