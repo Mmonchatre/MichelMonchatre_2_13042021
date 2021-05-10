@@ -38,45 +38,57 @@ header, main {
 
 header {
     display: flex;
-    justify-content: space-between;
-    /* flex-wrap: wrap; 
+    flex-wrap: wrap;
     align-items: center;
-    /* overflow:hidden; */
-    font-weight:500;
+    justify-content: space-between;
+    height:fit-content;
+    font-weight:500; 
+    margin-bottom: 5px;
+}
+
+
+header #logo  {
+    display: flex;
+    align-items: center;
+    float:left;
+    margin-left: 10px;
     height: 100px;
 }
 
-#header_menu {
-    display: flex;
-    align-items: center;
-    }
 
 header nav {
     display: flex;
     flex-wrap: wrap;
+    height: 100px;
     width: 100%;
     align-items: center;
     justify-content: space-between;
 }
 
-header #logo  {
-    float:left;
-    margin-left: 10px;
-}
-
 header nav ul {
     display: flex; 
     justify-content: space-between;
-    /*flex-direction: row;*/
-    width: 300px;
+    width: 100%;
     list-style: none;
 }
 
+#header_menu {
+    display: flex;
+    height: 100px;   
+    width: 40%;
+    padding: 0px;
+}
+
+#header_menu li {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
 /* header nav ul li a:hover { */
-    header nav a:hover {
-    
-    border-top : 2px solid #0065FC;
-    
+    header nav li:hover {
+    border-top : 3px solid #0065FC;
+   
 }
 
 header nav a {
@@ -263,7 +275,7 @@ header nav a {
 .sub_hebergements {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: #F2F2F2;
     max-width: 60%;
     min-width: 375px;
@@ -374,7 +386,7 @@ header nav a {
     display: flex;
     width: 90%;
     justify-content: space-between;
-    margin-left: 10px;
+    
 }
 
 /* changement de couleurs des etoiles */
@@ -498,57 +510,80 @@ footer .footer-item ul {
     padding-left: 0px;
 }
 
-/* modification associées au site responsive */
+/* ***************************************************
+*       modifications associées au site responsive 
+******************************************************/
 
-
+/*
 @media screen and (max-width: 1275px) {
 
+
+    body {
+        margin: auto;
+    }
 
     .sub_hebergements, .populaires {
         display:flex;
         flex-direction: row;
-        /*justify-content: start; */
         justify-content: space-around;
         flex-wrap: wrap;
         max-width: 100%;
     }
-
-
 }
 
+*/
 
-@media screen and (max-width: 380px) {
 
 
+
+@media screen and (max-width: 520px) {
     .bandeau_filtre, footer { 
         flex-direction: column;
         align-items: flex-start;
     }
 
-
 /* dans le header : premiere ligne  logo et "s'inscrire" ; deuxieme = navigation */
 
-    header  {
-        flex-direction: column;
-    }
+header  {
+    display: flex;
+    flex-direction: column;
+    height:200px;
+}
 
-    header nav { 
-        justify-content: space-between;
-    }    
-   
-    header nav ul {
-        margin-left: 0px;
-        justify-content: space-around;
-        order: 3;
-    }
+#header_menu { 
+    width: 100%;
+    min-width: 375px;
+    justify-content: space-around;
+    order: 3;
+}
+
+header nav ul {
+    margin-left: 0px;
+    width: 100%;
+    justify-content: space-around;
+    order: 3;
+}
+
+#header_menu li {
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+    padding: 0px
+}
+
+#header_menu li:hover { 
+    border-top: 0px;
+    border-bottom : 3px solid #0065FC;
+}
+}
+
+@media screen and (max-width: 380px) {
+
+
+
 
 
     /*centrer tous les elements avec image en largeur */
-
-    
-    body {
-        margin: auto;
-    }
 
     header, main {
         padding-left: 0px;
@@ -559,10 +594,8 @@ footer .footer-item ul {
         margin-right: auto;
     }
 
-
     .sub_hebergements , .populaires , #colonnes_activites {
     /*    margin: auto; */
-    
     }
     
 
@@ -575,8 +608,6 @@ footer .footer-item ul {
             order: 2;
             } 
     
-
-
     /* dans le champ recherche , changer le mot rechercher par la loupe avec encadrement radius */
     .champ_recherche button {
         display: none;}   
@@ -592,8 +623,6 @@ footer .footer-item ul {
         border-radius: 15px  ; 
         margin-left: -15px;
         }
-
- 
 
     /* les tailles d'images des activités sont les memes que pour les populaires     */
     .activite_format1 img , .activite_format2 img , .activite_format3 img {
