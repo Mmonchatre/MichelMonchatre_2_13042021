@@ -16,6 +16,12 @@ body
     margin: 0px;
 }
 
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
 main {
     width: 100%;
 }
@@ -348,7 +354,7 @@ table th {
     width: 100%;
 }
 
-/* colonne populaire */
+/* section populaires */
 
 .populaires {
     display: flex;
@@ -361,6 +367,12 @@ table th {
     padding-left: 4%;
     padding-right: 4%;
 }
+
+.colonne_populaires {
+    display: flex;
+    flex-direction: column;
+}
+
 
 .populaire a {
     display: flex;
@@ -444,6 +456,7 @@ table th {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-right:10px;
 }
  
 .activite_format1 a, .activite_format2 a, .activite_format3 a, .activite_format4 a{
@@ -493,8 +506,8 @@ table th {
 footer
 {
     display: flex;
-    width: 100%;
-    max-width: 100%;
+    min-width: 107%;
+    max-width: 107%;
     flex-wrap: wrap;
     justify-content: space-around; 
     background-color: #F2F2F2;
@@ -513,6 +526,27 @@ footer .footer-item ul {
 *       modifications associées au site responsive 
 ******************************************************/
 
+
+@media screen and (max-width: 1206px) {
+
+    .sub_hebergements .populaires {
+        max-width: 100%;
+        
+    }
+
+    .populaires { 
+        width : 100%;
+        max-width: 100%;
+    }
+
+    .colonne_populaires {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    
 
 @media screen and (max-width: 520px) {
     .bandeau_filtre, footer { 
