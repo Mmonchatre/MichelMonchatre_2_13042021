@@ -16,14 +16,8 @@ body
     margin: 0px;
 }
 
-
-*, *:before, *:after {
-    box-sizing: inherit;
-}
-
-
 main {
-    width: 100%;
+    width: 94%;
 }
 
 i { 
@@ -38,8 +32,8 @@ a, a:hover, a:active, a:visited, a:focus {
 /*header */
 
 header, main {
-    padding-left: 4% ;
-    padding-right: 4%;
+    padding-left: 3% ;
+    padding-right: 3%;
 }
 
 header {
@@ -54,6 +48,13 @@ header {
 }
 
 
+header #logo  {
+    display: flex;
+    align-items: center;
+    /* margin-left: 10px;  */
+    height: 80px;
+    margin-right:auto
+}
 
 header nav {
     display: flex;
@@ -63,16 +64,6 @@ header nav {
     align-items: center;
     justify-content: space-between;
 }
-
-
-header #logo  {
-    display: flex;
-    align-items: center;
-    /* margin-left: 10px;  */
-    height: 80px;
-    margin-right:auto
-}
-
 
 header nav ul {
 /*    display: flex;  */
@@ -288,8 +279,7 @@ table th {
 .hebergements {
     display: flex;
     flex-wrap: wrap; 
-    /* max-width: 1340px; */
-    max-width: 100%;
+    width: 100%;
     justify-content: space-between;
     height: fit-content;
 }
@@ -506,12 +496,12 @@ table th {
 footer
 {
     display: flex;
-    min-width: 107%;
-    max-width: 107%;
+    min-width: 100%;  
+    max-width: 100%;
     flex-wrap: wrap;
     justify-content: space-around; 
     background-color: #F2F2F2;
-    padding: 10px; 
+    /*padding: 10px;  */
     margin-top: 20px;
     list-style-type: none;
 }
@@ -527,17 +517,14 @@ footer .footer-item ul {
 ******************************************************/
 
 
-@media screen and (max-width: 1206px) {
+@media screen and (max-width: 1220px) {
 
-    .sub_hebergements .populaires {
+    .sub_hebergements, .populaires {
         max-width: 100%;
-        
-    }
-
-    .populaires { 
         width : 100%;
-        max-width: 100%;
     }
+
+    
 
     .colonne_populaires {
         display: flex;
