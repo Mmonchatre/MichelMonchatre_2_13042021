@@ -43,40 +43,46 @@ header {
     justify-content: space-between;
     height:fit-content;
     font-weight:500; 
-    margin-bottom: 5px;
+    margin-bottom: 10px; /* pour affichage du trait de soulignement masqué par la bordure de la section recherche */
+    font-size: 17px;
+}
+
+
+
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    height: 80px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
 }
 
 
 header #logo  {
     display: flex;
     align-items: center;
-    float:left;
-    margin-left: 10px;
-    height: 100px;
+    /* margin-left: 10px;  */
+    height: 80px;
+    margin-right:auto
 }
 
-
-header nav {
-    display: flex;
-    flex-wrap: wrap;
-    height: 100px;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-}
 
 header nav ul {
-    display: flex; 
-    justify-content: space-between;
+/*    display: flex;  */
     width: 100%;
     list-style: none;
 }
 
 #header_menu {
     display: flex;
+    justify-content: space-between;
     height: 100px;   
-    width: 40%;
+    width: 20%;
+    min-width: fit-content;
     padding: 0px;
+    margin: 0px;
+    margin-right: 50px;
 }
 
 #header_menu li {
@@ -88,27 +94,25 @@ header nav ul {
 /* header nav ul li a:hover { */
     header nav li:hover {
     border-top : 3px solid #0065FC;
-   
 }
-
-header nav a {
-    margin-right: 10px;  
-    }
 
 /* definition de la section recherche */
 
 .recherche
 {
     display: inline-block;  
-    border: 1px;    
+    /* border: 1px;    */
     background-color: white;
     border-radius: 10px;
-    border-width: 1px;
-    margin: 10px;
+    /* border-width: 1px; */
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
     padding: 5px;
     vertical-align: top;
    /* margin-right: 2%; */
 }
+
 
 .champ_recherche{
     display: flex;
@@ -179,6 +183,10 @@ header nav a {
     display: none; 
  }
 
+ .loupe_recherche {
+     margin-right: -2px
+ }
+
  .loupe_recherche i {
     color:white;
 }
@@ -193,13 +201,21 @@ header nav a {
     background-color: white;
     border-radius: 100%;
     border: 2px solid #d9d9d9;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 .infos {
     display:flex;
     align-items: center;
 }
+/* definition d'un tableau pour la partie infos pour ne pas deformer le cercle */
+table th {
+    text-align:left ;
+    font-weight: 500;
+    margin: 0px;
+}
+
+/* definitions des styles pour la section filtres */
 
 .libelle_filtre {
 	font-size: 20px;
@@ -277,11 +293,11 @@ header nav a {
     flex-wrap: wrap;
     justify-content: space-between;
     background-color: #F2F2F2;
-    max-width: 60%;
+    max-width: 57%;
     min-width: 375px;
     border-radius: 15px;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 3%;
+    padding-right: 3%;
     /*margin-right: 40px;  */
     }
 
@@ -309,7 +325,6 @@ header nav a {
 	border-radius: 15px;
     margin: 0px 0px 40px 0px; 
     font-weight: 400;
-    
 }
 
 .hebergement img {
@@ -326,7 +341,6 @@ header nav a {
     height: 72px;
 }
 
-
 .sub_hebergements p {
     font-weight: 700;
     font-size: 20px;
@@ -341,13 +355,12 @@ header nav a {
     flex-direction: column; 
     justify-content: space-around;
     background-color: #F2F2F2;
-    max-width: 30%;
+    max-width: 28%;
     min-width: 350px;
     border-radius: 15px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 4%;
+    padding-right: 4%;
 }
-
 
 .populaire a {
     display: flex;
@@ -370,7 +383,6 @@ header nav a {
     margin-bottom: 10px;
 }
 
-
 .populaire img {
     max-width: 130px;
     width: 100%;
@@ -384,9 +396,8 @@ header nav a {
 
 .populaires h2 {
     display: flex;
-    width: 90%;
+    width: 100%;
     justify-content: space-between;
-    
 }
 
 /* changement de couleurs des etoiles */
@@ -401,8 +412,8 @@ header nav a {
     color: #DEEBFF;
 }
 
-
  /* definition de la section activité */
+
 .activites {
     display: flex;
     flex-direction: column;
@@ -410,33 +421,23 @@ header nav a {
     align-content: space-around;
     background-color: white;
     min-width: 375px;
-    max-width: 1340px;
+    max-width: 100%;
     overflow:hidden;
-    padding: 40px;
+    margin:auto;
+    /*padding: 40px; */
 }
-
 
 .activites h2 {
     width: 100%;
 }
 
-
 #colonnes_activites {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
     justify-content: space-between;    
+    margin: auto;
 } 
-
-/* .colonne_activites_1, .colonne_activites_2 , .colonne_activites_3 , .colonne_activites_4  */
-
-/*  a supprimer:
- #colonne_activites_2 , #colonne_activites_4 {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-*/
 
 .colonne_activites  {
     display: flex;
@@ -444,7 +445,6 @@ header nav a {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
  
 .activite_format1 a, .activite_format2 a, .activite_format3 a, .activite_format4 a{
     display: flex;
@@ -488,14 +488,13 @@ header nav a {
 }
 
 
-
-
 /* definition du pied de page */
 
 footer
 {
     display: flex;
     width: 100%;
+    max-width: 100%;
     flex-wrap: wrap;
     justify-content: space-around; 
     background-color: #F2F2F2;
@@ -514,27 +513,6 @@ footer .footer-item ul {
 *       modifications associées au site responsive 
 ******************************************************/
 
-/*
-@media screen and (max-width: 1275px) {
-
-
-    body {
-        margin: auto;
-    }
-
-    .sub_hebergements, .populaires {
-        display:flex;
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        max-width: 100%;
-    }
-}
-
-*/
-
-
-
 
 @media screen and (max-width: 520px) {
     .bandeau_filtre, footer { 
@@ -544,46 +522,60 @@ footer .footer-item ul {
 
 /* dans le header : premiere ligne  logo et "s'inscrire" ; deuxieme = navigation */
 
-header  {
-    display: flex;
-    flex-direction: column;
-    height:200px;
+    header  {
+        display: flex;
+        flex-direction: column;
+        height:160px;
+    }
+
+    #header_menu { 
+        width: 100%;
+        min-width: 375px;
+        justify-content: space-around;
+        order: 3;
+    }
+
+    header nav ul {
+        margin-left: 0px;
+        width: 100%;
+        justify-content: space-around;
+        order: 3;
+    }
+
+/* trait sous le menu nav */
+    #header_menu li {
+        width: 50%;
+        text-align: center;
+        justify-content: center;
+        padding: 0px;
+        border-bottom: 3px solid #F2F2F2;
+    }
+
+    #header_menu li:hover { 
+        border-top: 0px;
+        border-bottom : 3px solid #0065FC;
+    }
+
+    .titres_full_largeur {
+        width:100%
+    }
+
+    /*centrage des images */
+
+    #colonnes_activites, .sub_hebergements  {
+        justify-content: space-around;    
+    } 
+    
+    .activites h2 {
+        padding-left: 10%;
+    }
 }
 
-#header_menu { 
-    width: 100%;
-    min-width: 375px;
-    justify-content: space-around;
-    order: 3;
-}
-
-header nav ul {
-    margin-left: 0px;
-    width: 100%;
-    justify-content: space-around;
-    order: 3;
-}
-
-#header_menu li {
-    width: 50%;
-    text-align: center;
-    justify-content: center;
-    padding: 0px
-}
-
-#header_menu li:hover { 
-    border-top: 0px;
-    border-bottom : 3px solid #0065FC;
-}
-}
-
-@media screen and (max-width: 380px) {
 
 
+@media screen and (max-width: 400px) {
 
 
-
-    /*centrer tous les elements avec image en largeur */
 
     header, main {
         padding-left: 0px;
@@ -594,19 +586,15 @@ header nav ul {
         margin-right: auto;
     }
 
-    .sub_hebergements , .populaires , #colonnes_activites {
-    /*    margin: auto; */
-    }
-    
 
     /* faire passer les populaires avant les hebergements */
 
     .hebergements .populaires {
         order: 1;
-        } 
+    } 
     .hebergements .sub_hebergements {
-            order: 2;
-            } 
+        order: 2;
+    } 
     
     /* dans le champ recherche , changer le mot rechercher par la loupe avec encadrement radius */
     .champ_recherche button {
@@ -632,12 +620,6 @@ header nav ul {
     /* background hebergement blanc */
     .sub_hebergements {
         background-color: white;
-    }
-
-    /* renforcement cercle mais fonctionne pas  */
-    .cercle_icone_info {
-        height: 25px;
-        width: 25px;
     }
 
     /* ombrage des etiquettes de hebergements */
