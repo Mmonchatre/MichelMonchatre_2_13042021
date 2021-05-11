@@ -93,6 +93,32 @@ header nav ul {
     border-top : 3px solid #0065FC;
 }
 
+
+/* header fixe */
+
+
+.header {
+    /* padding: 20px 10px; */
+    background: #FFF;
+    /* color: black; */
+  }
+  
+  .content {
+    padding: 0px;
+  }
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .sticky + .content {
+    padding-top: 200px;
+  }
+
+
+
 /* definition de la section recherche */
 
 .recherche
@@ -349,7 +375,7 @@ table th {
 .populaires {
     display: flex;
     flex-direction: column; 
-    justify-content: space-around;
+    /* justify-content: space-around; */
     background-color: #F2F2F2;
     max-width: 28%;
     min-width: 350px;
@@ -533,7 +559,7 @@ footer .footer-item ul {
         justify-content: space-between;
     }
     
-    
+} 
 
 @media screen and (max-width: 520px) {
     .bandeau_filtre, footer { 
@@ -541,7 +567,7 @@ footer .footer-item ul {
         align-items: flex-start;
     }
 
-/* dans le header : premiere ligne  logo et "s'inscrire" ; deuxieme = navigation */
+    /* dans le header : premiere ligne  logo et "s'inscrire" ; deuxieme = navigation */
 
     header  {
         display: flex;
@@ -563,7 +589,7 @@ footer .footer-item ul {
         order: 3;
     }
 
-/* trait sous le menu nav */
+    /* trait sous le menu nav */
     #header_menu li {
         width: 50%;
         text-align: center;
