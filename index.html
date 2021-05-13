@@ -5,85 +5,54 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">        
         
         <title>MM site Reservia</title>
-        
-        <!-- Metatag additionnel pour FB twitter etc -->
-        <meta name="Site Reservia MM" content="Site de Reservation de vacances de reve." />
-
-        <!-- Twitter Card data -->
-        <meta name="twitter:card" content="summary">
-
-        <!-- Open Graph data -->
-        <meta property="og:title" content="Title Here"/>
-        <meta property="og:type" content="website"/>
-        <meta property="og:url" content="http://www.example.com/"/>
-        <meta property="og:image" content="http://example.com/image.jpg"/>
-        <meta property="og:description" content="Description Here"/>        
         <link rel="stylesheet" href="reservia.css" />
-
         <link rel="preconnect" href="https://fonts.gstatic.com">
          <!-- polices Raleway 400 et 700 -->
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
         <!-- icones -->
         <script src="https://kit.fontawesome.com/e9e2ad4a22.js" crossorigin="anonymous"></script>
-
-        
     </head>
 
     <body>
-        <div class="header" id="myHeader">
-            <header>
-                <nav>
+        <header>
+            <nav>
                 <div id="logo">
                     <a href="#"><img   src="images/logo/Reservia.svg" alt="Logo du site" ></a></div>
                 <ul id="header_menu">
                     <li><a href="#Hebergements">Hébergements</a></li>
                     <li><a href="#Activites">Activités</a></li>
                 </ul>
-            
                 <a href="#">S'inscrire</a>
-                
             </nav>
         </header>
-    </div>
-    <div class="content">
-        <main>
-            <section class="recherche">
-                <h2>Trouvez votre hébergement pour des vacances de rêve  </h2>
-                En plein centre ville ou en pleine nature
-            
-                <div class="champ_recherche">
-                    <div  class="bouton_recherche_gauche "><i class="fas fa-map-marker-alt" ></i></div>
-                    <INPUT TYPE=TEXT NAME='ville' value="Marseille, France" class="input_recherche"/> 
-                    <div><button>Rechercher</button></div>
-                    <div class="loupe_recherche"><i class="fas fa-search"></i></div> 
-                </div> 
 
-                <div id="bandeau_filtre">
+    <main>
+        <section class="recherche">
+            <h2>Trouvez votre hébergement pour des vacances de rêve  </h2>
+            En plein centre ville ou en pleine nature
+            
+            <div class="champ_recherche">
+                <div  class="bouton_recherche_gauche "><i class="fas fa-map-marker-alt" ></i></div>
+                <INPUT TYPE=TEXT NAME='ville' value="Marseille, France" class="input_recherche"/> 
+                <div><button>Rechercher</button></div>
+                <div class="loupe_recherche"><i class="fas fa-search"></i></div> 
+            </div> 
+
+            <div id="bandeau_filtre">
                     <div class="titres_full_largeur">Filtres</div>
                     <div class="bouton_filtre"> <div class="cercle_filtre"><i class="fas fa-money-bill-wave"></i></div><span class="libelle_filtre" >Economique</span></div>
                     <div class="bouton_filtre"> <div class="cercle_filtre"><i class="fas fa-child"></i></div><span class="libelle_filtre" >Familial</span></div>
                     <div class="bouton_filtre"> <div class="cercle_filtre"><i class="fas fa-heart"></i></div><span class="libelle_filtre" >Romantique</span></div>
                     <div class="bouton_filtre"> <div class="cercle_filtre"><i class="fas fa-dog"></i></div><span class="libelle_filtre" >Animaux autorisés</span></div>
-                </div>
-            </section>
+            </div>
+        </section>
        
-<!-- definition de la partie info en mode tableau pour pas deformer le cercle ...-->
+            <!-- partie info ...-->
 
-            <table>
-                <tr>
-                    <th>
-                        <span class="cercle_icone_info">
-                            <i class="fas fa-info" ></i>
-                        </span>
-                    </th>
-                    <th>
-                        Plus de 500 logements sont disponibles dans cette ville
-                    </th>
-                </tr>
-            </table>
+        <p><span class="cercle_icone_info"><i class="fas fa-info" ></i></span><span>Plus de 500 logements sont disponibles dans cette ville</span></p>
 
-
-            <div id="hebergements">
+        <div class="hebergements">
+            <div id="hebergements"></div>
                <section class=sub_hebergements>
                     <h2 id="Hebergements">Hébergements à Marseille</h2>
 
@@ -109,6 +78,7 @@
                             </div>
                         </a>
                     </div>
+
                     <div class="hebergement">
                         <a href="#">                        
                             <img alt="Hotel les Mouettes" src="./images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg">
@@ -119,11 +89,6 @@
                             </div>
                         </a>
                     </div>
-
-
-
-
-
 
                     <div class="hebergement">
                         <a href="#">
@@ -158,11 +123,9 @@
                             </div>
                         </a>      
                     </div>
-  
-
-  
                     <p>Afficher Plus</p>                                                                          
                 </section>
+
                 <section class=populaires>
                     <h2>Les plus populaires <i class="fas fa-chart-line"></i>   </h2>
                         <div class="colonne_populaires">
@@ -286,26 +249,9 @@
             </ul>
             </div>
         </footer>
-    </div>
 
 
 
-<!--
-    <script>
-        window.onscroll = function() {myFunction()};
-        
-        var header = document.getElementById("myHeader");
-        var sticky = header.offsetTop;
-        
-        function myFunction() {
-          if (window.pageYOffset > sticky) {
-            header.classList.add("sticky");
-          } else {
-            header.classList.remove("sticky");
-          }
-        }
-    </script>
--->
 
     </body>
 </html>
