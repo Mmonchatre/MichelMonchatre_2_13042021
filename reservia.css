@@ -6,15 +6,14 @@
 
 body
 {
-    background-color: white;
     color: black;
     font-size: 15px;
-    width: 100%;
-    max-width: 1200px;
+    margin: 0px;
 }
 
-main {
-    width: 94%;
+nav, main, .piedpage, header nav  {
+    max-width:1440px;
+    margin: 0 auto;
 }
 
 i { 
@@ -27,125 +26,85 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 a:visited {
-    color:black;
+    color: unset;
 }
 
 /*header */
 
-header, main {
-    padding-left: 3% ;
-    padding-right: 3%;
-}
 
 header {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    height:fit-content;
     font-weight:500; 
-    margin-bottom: 10px; /* pour affichage du trait de soulignement masqué par la bordure de la section recherche */
     font-size: 17px;
-    position: sticky;
-}
-
-
-header #logo  {
-    display: flex;
-    align-items: center;
-    height: 80px;
-    margin-right:auto
+    width:100%;
+    background-color: white; /* pour le scrolling */
+    position: fixed;
+    top: 0;
+    z-index: 1;
 }
 
 header nav {
     display: flex;
-    flex-wrap: wrap;
     height: 80px;
-    width: 100%;
     align-items: center;
-    justify-content: space-between;
+    }
+
+header #logo, #header_menu li , a.inscrire {
+    border-top: 3px solid transparent;
+}
+    
+header #logo  {
+    display: flex;
+    margin-right:auto
 }
 
 header nav ul {
-/*    display: flex;  */
-    width: 100%;
     list-style: none;
 }
 
 #header_menu {
     display: flex;
     justify-content: space-between;
-    height: 80px;   
-    width: 20%;
-    min-width: fit-content;
-    padding: 0px;
-    margin: 0px;
     margin-right: 50px;
+    height: 100% 
 }
 
 #header_menu li {
+    box-sizing: border-box;
     display: flex;
     align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
-/* header nav ul li a:hover { */
-    header nav li:hover {
+
+#header_menu li:hover {
     border-top : 3px solid #0065FC;
 }
 
-
-/* header fixe */
-
-
-.header {
-    /* padding: 20px 10px; */
-    background: #FFF;
-    /* opacity: 0.5; */
+a.inscrire {
+    font-weight: 700;
+    color:#0065FC;
 }
-  
-  .content {
-    padding-top: 90px;
-    padding: 0px;
-  }
-  
-  .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-  
-  .sticky + .content {
-    padding-top: 190px;
-  }
 
-
-
-
+main {
+    position:relative;
+    top: 80px;
+}
 
 /* definition de la section recherche */
 
+/*
 .recherche
 {
-    display: inline-block;  
-    /* border: 1px;    */
-    background-color: white;
-    border-radius: 10px;
-    /* border-width: 1px; */
     margin: auto;
     margin-bottom: 10px;
-    margin-top: 10px;
-    padding: 5px;
-    vertical-align: top;
-   /* margin-right: 2%; */
 }
-
+*/
 
 .champ_recherche{
     display: flex;
     border: 2px solid #d9d9d9; 
     border-radius: 15px;
-    width: fit-content;
+    width: max-content;
     font-size: 20px;
     height: 46px;
     align-items: center;
@@ -161,7 +120,6 @@ header nav ul {
 	width: 50px;
     height: 50px; 
     background-color: #d9d9d9;
-    /* color: black; */
     border-radius: 15px 0px 0px 15px   ;  
 } 
 
@@ -171,20 +129,11 @@ header nav ul {
 
 .input_recherche { 
     border: 0;
-    /*height: 40px; */
-    /* background-color: white; */
     font-weight: 700;
     font-size: 20px;
     padding-left: 10px;
     margin-left: 4px; 
 }
-
-
-/* a supprimer
-.champ_recherche .bouton_recherche_gauche INPUT {
-    margin-left: 10px;
-}
-*/
 
 .champ_recherche button  {
     border: none ;
@@ -194,9 +143,9 @@ header nav ul {
     border-radius: 0px 15px 15px 0px   ;
     background-color: #0065FC;
     color: white;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-right: -4px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: -4px; /* pour cacher le tour du bouton total */
  }
 
  .champ_recherche .loupe_recherche {
@@ -235,12 +184,7 @@ header nav ul {
     display:flex;
     align-items: center;
 }
-/* definition d'un tableau pour la partie infos pour ne pas deformer le cercle */
-table th {
-    text-align:left ;
-    font-weight: 500;
-    margin: 0px;
-}
+
 
 /* definitions des styles pour la section filtres */
 
@@ -290,7 +234,7 @@ table th {
 
 .bouton_filtre {
 	display: flex;
-	background-color: white;
+	/* background-color: white; */
 	height: 46px;
 	border-radius: 25px;
 	text-align:center;	
@@ -304,22 +248,21 @@ table th {
     background-color: #b3c7e2;
 }
 
-/* definition de la section herbergement */
 
+/* navigation hebergements et activites */
 #hebergements {
     position:absolute; 
-    top: -100px;
+    top: -90px;
 }
 
+/* definition de la section herbergement */
+
 .hebergements {
-    position: relative;
+    position: relative; 
     display: flex;
     flex-wrap: wrap; 
-    width: 100%;
     justify-content: space-between;
     height: fit-content;
-    /*scroll-margin-top: 80px; */
-
 }
 
 .sub_hebergements {
@@ -337,8 +280,8 @@ table th {
     }
 
     .sub_hebergements,  .populaires {
-        margin-top: 20px;
-        margin-bottom: 20px;
+        /* margin-top: 20px; */
+        margin-bottom: 40px;
     }
 
 
@@ -388,10 +331,8 @@ table th {
 .populaires {
     display: flex;
     flex-direction: column; 
-    /* justify-content: space-around; */
     background-color: #F2F2F2;
     max-width: 28%;
-    /* min-width: 350px; */
     border-radius: 15px;
     padding-left: 4%;
     padding-right: 4%;
@@ -400,6 +341,9 @@ table th {
 .colonne_populaires {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    margin-bottom: 40px;
 }
 
 
@@ -412,7 +356,7 @@ table th {
     overflow:hidden;
     border: 5px solid white;
     border-radius: 15px;
-    margin: 15px 0px 15px 0px; 
+    margin: 0px 0px 0px 0px; 
     font-weight: 400;
 } 
 
@@ -426,7 +370,7 @@ table th {
 
 .populaire img {
     max-width: 130px;
-    width: 100%;
+    width: 40%;
     height: 145px;
     object-fit: cover;    
 }
@@ -437,7 +381,6 @@ table th {
 
 .populaires h2 {
     display: flex;
-    width: 100%;
     justify-content: space-between;
 }
 
@@ -455,43 +398,43 @@ table th {
 
  /* definition de la section activité */
 
+#activites {
+    position:absolute;
+    top: -90px;
+}
+
 .activites {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: space-around;
-    margin-left:auto;
-    margin-right:auto;
+    position: relative
 }
 
-.activites h2 {
-    width: 100%;
-}
-
-#colonnes_activites {
+.colonnes_activites {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
     justify-content: space-between;    
-    margin: auto;
-} 
+    } 
 
 .colonne_activites  {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    width: 23%;
+    padding: 10px;
     justify-content: space-between;
-    margin-right:10px;
+}
+
+.colonnes_activites div:first-child {
+    padding-left : 0px;
+}
+
+.colonnes_activites div:last-child {
+    padding-right : 0px;
 }
  
 .activite_format1 a, .activite_format2 a, .activite_format3 a, .activite_format4 a{
     display: flex;
     flex-direction: column;
-    text-align: left; 
-    width: 304px;
-    min-width: 304px;
-    justify-content: center;
-    overflow:hidden;
+    /*text-align: left; */
+    overflow:hidden; 
 	border-radius: 15px;
 	box-shadow: 5px 5px 5px grey;
     font-weight: 700;
@@ -501,49 +444,57 @@ table th {
 .libelle_activite {
     font-weight: 700;
     height: 30px;
-    font-size: 20px;
     margin: 10px 5px 0px 10px;
 }
 
-.activite_format1  img  {
-    height: 400px;
+
+
+.activites img {
     object-fit: cover;
     width: 100%;
+}
+.activite_format1  img  {
+    height: 380px;
 }
 
 .activite_format2  img  {
     height: 190px;
-    object-fit: cover;
-    width: 100%;
 }
 
 .activite_format3  img  {
     height: 120px;
-    object-fit: cover;
-    width: 100%;
 }
 
 
 /* definition du pied de page */
 
-footer
-{
+.piedpage {
     display: flex;
-    min-width: 100%;  
-    max-width: 100%;
     flex-wrap: wrap;
-    justify-content: space-around; 
+}
+
+.piedpage ul {
+
+    padding: 0px;
+    line-height: 2em;
+    
+}
+
+.footer-item {
+    width: 33%;
+}
+
+footer {
+    width: 100%;
     background-color: #F2F2F2;
-    /*padding: 10px;  */
-    margin-top: 20px;
-    list-style-type: none;
+    position: relative;
+    top: 90px;
 }
 
 footer .footer-item ul {
     list-style-type: none;
-    margin-left: 0px;
-    padding-left: 0px;
 }
+
 
 /* ***************************************************
 *       modifications associées au site responsive 
@@ -569,7 +520,7 @@ footer .footer-item ul {
 } 
 
 @media screen and (max-width: 520px) {
-    .bandeau_filtre, footer { 
+    .bandeau_filtre, .piedpage { 
         flex-direction: column;
         align-items: flex-start;
     }
@@ -627,8 +578,18 @@ footer .footer-item ul {
 
 
 
-@media screen and (max-width: 400px) {
+/*  
 
+breaking-points :
+
+Les très petits écrans (< 768 px : pour les écrans dont la largeur est comprise entre 0 px et 768 px)
+Tablettes (768 px - 991 px)
+Ordinateurs (992 px - 1199 px)
+Grands écrans d'ordinateurs et télévisions
+
+*/
+
+@media screen and (max-width: 400px) {
 
 
     header, main {
@@ -676,6 +637,16 @@ footer .footer-item ul {
 
     /* ombrage des etiquettes de hebergements */
     .hebergement {
-        box-shadow: 10px 10px 5px grey;
+        box-shadow: 10px 10px 5px rgb(196, 196, 196);
+    }
+
+
+    .piedpage ul {
+        flex-direction: column;
+        margin-right: 0px;
+    }
+
+    .footer-item {
+        width: 100%;
     }
 }
