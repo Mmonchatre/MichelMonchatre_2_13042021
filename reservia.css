@@ -267,7 +267,6 @@ a.inscrire {
 }
 .liste_hebergements {
     width: 100%;
-    border: 2px solid green;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
