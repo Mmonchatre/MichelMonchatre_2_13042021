@@ -39,7 +39,7 @@
             </div> 
 
             <div id="bandeau_filtre">
-                    <div class="titres_full_largeur">Filtres</div>
+                    <div>Filtres</div>
                     <div class="bouton_filtre"> <div class="cercle_filtre"><i class="fas fa-money-bill-wave"></i></div><span class="libelle_filtre" >Economique</span></div>
                     <div class="bouton_filtre"> <div class="cercle_filtre"><i class="fas fa-child"></i></div><span class="libelle_filtre" >Familial</span></div>
                     <div class="bouton_filtre"> <div class="cercle_filtre"><i class="fas fa-heart"></i></div><span class="libelle_filtre" >Romantique</span></div>
@@ -56,20 +56,22 @@
             <span>Plus de 500 logements sont disponibles dans cette ville</span>
         </p>
 
-        <div class="hebergements">
-            <div id="hebergements"></div>
-                <section class=sub_hebergements>
+        <!-- Hebergements et activités -->
+        <div class="hebergements_et_activites">
+            <section class=hebergements>
+                <div id="hebergements"></div>
                 <h2>Hébergements à Marseille</h2>
-                <div class="hebergement">
-                    <a href="#">
-                        <img alt="Auberge de la Cannebière"   src="./images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg">
-                        <div class="hebergement_description">
-                            <span class="libelle_images">Auberge de la Cannebière</span>
-                            <span>Nuit à partir de 25€</span>
-                            <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-                        </div>
-                    </a>
-                </div>
+                <div class="liste_hebergements">
+                    <div class="hebergement">
+                        <a href="#">
+                            <img alt="Auberge de la Cannebière"   src="./images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg">
+                            <div class="hebergement_description">
+                                <span class="libelle_images">Auberge de la Cannebière</span>
+                                <span>Nuit à partir de 25€</span>
+                                <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                            </div>
+                        </a>
+                    </div>
 
                     <div class="hebergement">
                         <a href="#">               
@@ -126,105 +128,102 @@
                             </div>
                         </a>      
                     </div>
-                    <p>Afficher Plus</p>                                                                          
-                </section>
+                </div>
 
-                <section class=populaires>
-                    <h2>Les plus populaires <i class="fas fa-chart-line"></i>   </h2>
-                        <div class="colonne_populaires">
-                            <div class="populaire">
-                                <a href="#">
-                                    <img 	alt="Hotel le soleil du matin" src="./images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg">
-                                    <div class="populaire_description">
-                                        <span class="titre_populaire">Hotel le soleil du matin</span>
-                                        <span>Nuit à partir de 128€</span>
-                                        <span class="etoiles_populaire"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-                                    </div>
-                                </a>
+                <p>Afficher Plus</p>                                                                          
+            </section>
+
+            <section class=populaires>
+                <h2>Les plus populaires <i class="fas fa-chart-line"></i>   </h2>
+                <div class="colonne_populaires">
+                    <div class="populaire">
+                        <a href="#">
+                            <img 	alt="Hotel le soleil du matin" src="./images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg">
+                            <div class="populaire_description">
+                                <span class="titre_populaire">Hotel le soleil du matin</span>
+                                <span>Nuit à partir de 128€</span>
+                                <span class="etoiles_populaire"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
                             </div>
-                            
-                            <div class="populaire">
-                                <a href="#">
-                                    <img 	alt="Au coeur de l'eau Chambre d'hôtes" src="./images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg">                                
-                                    <div class="populaire_description">
-                                        <span class="titre_populaire">Au coeur de l'eau<br>Chambre d'hôtes</span>
-                                        <span>Nuit à partir de 71€</span>
-                                        <span class="etoiles_populaire"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-                                    </div>
-                                </a>
+                        </a>
+                    </div>
+                    
+                    <div class="populaire">
+                        <a href="#">
+                            <img 	alt="Au coeur de l'eau Chambre d'hôtes" src="./images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg">                                
+                            <div class="populaire_description">
+                                <span class="titre_populaire">Au coeur de l'eau<br>Chambre d'hôtes</span>
+                                <span>Nuit à partir de 71€</span>
+                                <span class="etoiles_populaire"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
                             </div>
-                            
-                            
-                            <div class="populaire">
-                                <a href="#">
-                                    <img alt="Hôtel Tout bleu et blanc" src="./images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg">
-                                    <div class="populaire_description">
-                                        <span class="titre_populaire">Hôtel Tout bleu et blanc</span>
-                                        <span>Nuit à partir de 68€</span>
-                                        <span class="etoiles_populaire"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-                                    </div>
-                                </a>
-                            
+                        </a>
+                    </div>
+                    
+                    
+                    <div class="populaire">
+                        <a href="#">
+                            <img alt="Hôtel Tout bleu et blanc" src="./images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg">
+                            <div class="populaire_description">
+                                <span class="titre_populaire">Hôtel Tout bleu et blanc</span>
+                                <span>Nuit à partir de 68€</span>
+                                <span class="etoiles_populaire"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
                             </div>
-                        </div>
-
-
-                </section>
-            </div>
-        
-            
-
-            <section class="activites">
-                <div id="activites"></div>
-                <h2>Activités à Marseille</h2>
-                    <div class="colonnes_activites">
+                        </a>
+                    
+                    </div>
                 
-                        <div class="colonne_activites">    
-                            <div class="activite_format1"><a href="#">
-                                <img alt="Vieux Port" src="./images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" >
-                                <span class="libelle_activite">Vieux Port</span></a>
-                            </div>
-                        </div>
-                        
-                        <div class="colonne_activites">
-                            <div class="activite_format2"><a href="#">
-                                <img alt="Fort de Pomègues" src="./images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" >
-                                <span class="libelle_activite">Fort de Pomègues</span></a> 
-                            </div>
-                            <div class="activite_format3"><a href="#">
-                                <img alt="Iles du Frioul" src="./images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" >
-                                <span class="libelle_activite">Iles du Frioul</span></a>
-                            </div>
-                        
-                        </div>
+                </div>
 
-                        <div class="colonne_activites">    
-                            <div class="activite_format1">
-                                <a href="#"><img alt="Parc National des calanques" src="./images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" >
-                                <span class="libelle_activite">Parc National des calanques</span></a>
-                            </div>
-                        </div>  
-
-                        <div class="colonne_activites">    
-                            <div class="activite_format3">
-                                <a href="#"><img alt="Notre dame de la garde" src="./images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" >
-                                <span class="libelle_activite">Notre dame de la garde</span></a>
-                            </div>
-                            <div class="activite_format2">
-                                <a href="#"><img  alt="Parc Longchamp" src="./images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg" >
-                                <span  class="libelle_activite">Parc Longchamp</span></a>
-                            </div>
+            </section>
+        </div>
+        
+        <section class="activites">
+            <div id="activites"></div>
+            <h2>Activités à Marseille</h2>
+                <div class="colonnes_activites">
+            
+                    <div class="colonne_activites">    
+                        <div class="activite_format1"><a href="#">
+                            <img alt="Vieux Port" src="./images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" >
+                            <span class="libelle_activite">Vieux Port</span></a>
                         </div>
                     </div>
-                        
-            </section>
-            
-            
+                    
+                    <div class="colonne_activites">
+                        <div class="activite_format2"><a href="#">
+                            <img alt="Fort de Pomègues" src="./images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" >
+                            <span class="libelle_activite">Fort de Pomègues</span></a> 
+                        </div>
+                        <div class="activite_format3"><a href="#">
+                            <img alt="Iles du Frioul" src="./images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" >
+                            <span class="libelle_activite">Iles du Frioul</span></a>
+                        </div>
+                    
+                    </div>
 
+                    <div class="colonne_activites">    
+                        <div class="activite_format1">
+                            <a href="#"><img alt="Parc National des calanques" src="./images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" >
+                            <span class="libelle_activite">Parc National des calanques</span></a>
+                        </div>
+                    </div>  
+
+                    <div class="colonne_activites">    
+                        <div class="activite_format3">
+                            <a href="#"><img alt="Notre dame de la garde" src="./images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" >
+                            <span class="libelle_activite">Notre dame de la garde</span></a>
+                        </div>
+                        <div class="activite_format2">
+                            <a href="#"><img  alt="Parc Longchamp" src="./images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg" >
+                            <span  class="libelle_activite">Parc Longchamp</span></a>
+                        </div>
+                    </div>
+                </div>  
+            </section>
         </main> 
+
         <!-- Footer-->
         <footer>
-            <div class="piedpage">
+            <div class="footer_class">
                 <div class="footer-item">
                     <h3>A Propos</h3>
                     <ul>
