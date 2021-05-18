@@ -11,11 +11,11 @@ body
     margin: 0px; /* pour suppression decalage de 8px par defaut du header */
 }
 
-header, main, .footer_class  {
+
+header nav, main, .footer_class  {
     max-width:1200px;  /* 1200 = conseil mentor */
     margin: 0 auto;
-    padding-left: 8px;
-    padding-right: 8px;
+    padding: 0 20px;
 }
 
 i { 
@@ -49,7 +49,7 @@ header {
 }
 
 header nav #logo {
-    margin-right:auto 
+    flex-grow: 1;
 }
 
 header nav {
@@ -78,17 +78,18 @@ header nav ul {
     padding-left: 30px;
     padding-right: 30px;
     border-top: 3px solid transparent;
+    border-bottom: 5px solid transparent;
 }
 
 
 a.inscrire {
     margin-left: 30px;
-    border-top: 3px solid transparent;
     font-weight: 700;
     color:#0065FC;
 }
 
 #header_menu li:hover {
+    color: #0065FC;
     border-top : 3px solid #0065FC;
 }
 
@@ -128,7 +129,6 @@ a.inscrire {
     font-size: 20px;
     padding-left: 10px;
     margin-left: 4px; 
-    width: 200px; /* optionnel, pour plusressembler a la maquette */
 }
 
 .champ_recherche button  {
@@ -173,6 +173,9 @@ a.inscrire {
     flex-shrink: 0;
 }
 
+.cercle_filtre,  .bouton_recherche_gauche, .loupe_recherche {
+    flex-shrink: 0;
+}
 .infos {
     display:flex;
     align-items: center;
@@ -423,7 +426,7 @@ a.inscrire {
     flex-direction: column;
     overflow:hidden; 
 	border-radius: 15px;
-	box-shadow: 5px 5px 5px grey;
+	box-shadow: 5px 5px 5px #DDD;
     font-weight: 700;
     margin:10px 0px 10px 0px;
 }
@@ -495,47 +498,64 @@ Grands écrans d'ordinateurs et télévisions
 
 @media screen and (max-width: 767px) {
 
-    .hebergements, .populaires {
+    .hebergements, .populaires, .activites {
         max-width: 100%;
         width : 100%;
     }
+
     #bandeau_filtre, .footer_class { 
         flex-direction: column;
         align-items: flex-start;
     }
-
         
+    header nav, main, .footer_class {
+        padding: 0
+    }
+
     main {
         padding-top: 160px
     }
-
-
+ 
   
     /* dans le header : premiere ligne  logo et "s'inscrire" ; deuxieme = navigation */
 
     header  {
+        width: 100%;
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
         height:160px;
     }
 
     header nav {
-        flex-wrap: wrap;
-        width: 100%; /* a verifier */
+        width: 100%;
+    }
+
+    header nav {
+        justify-content: space-around;
     }
 
     #header_menu { 
         justify-content: space-around;
+        width: 100%;
+        margin: 0;
         order: 3;
     }
 
     header nav ul {
-        margin-left: 0px;
-        width: 100%;
-        justify-content: space-around;
+
         padding: 0px;
-        order: 3;
+    
     }
+
+    a.inscrire {
+        padding-right: 3%
+    }
+
+    header nav #logo {
+        padding-left: 3%;
+    }
+    
 
     /* trait sous le menu nav */
     #header_menu li {
@@ -543,14 +563,45 @@ Grands écrans d'ordinateurs et télévisions
         text-align: center;
         justify-content: center;
         padding: 0px;
-        border-bottom: 3px solid #F2F2F2;
+        border-top: transparent;
+        border-bottom: 5px solid #F2F2F2;
     }
 
     #header_menu li:hover { 
-        border-top: 0px;
-        border-bottom : 3px solid #0065FC;
+        color: #0065FC;
+        border-top: transparent;
+        border-bottom : 5px solid #0065FC;
     }
 
+
+    
+/* dans le champ recherche , changer le mot rechercher par la loupe avec encadrement radius */
+.champ_recherche button {
+    display: none;}   
+
+.champ_recherche .loupe_recherche {
+    display:contents;
+    display: flex;
+    background-color: #0065FC;
+    border-radius: 15px  ; 
+    }
+
+    .input_recherche {
+        width: 100%
+    }
+    .recherche {
+        margin: 25px;
+    }
+    
+    .bouton_filtre {
+    margin: 5px 0px;
+    
+    }
+    
+    .champ_recherche {
+        width: 100%;
+        margin: 20px    auto;
+    }
 
 /* ancrage navigation hebergements et activites */
 #hebergements, #activites {
@@ -564,24 +615,10 @@ Grands écrans d'ordinateurs et télévisions
     justify-content: space-around;    
 } 
 
+.populaires {
+    border-radius: 0;
+}
 
-/* dans le champ recherche , changer le mot rechercher par la loupe avec encadrement radius */
-    .champ_recherche button {
-        display: none;}   
-
-    .champ_recherche .loupe_recherche {
-        display:contents;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 50px;
-        height: 50px; 
-        background-color: #0065FC;
-        border-radius: 15px  ; 
-        margin-left: -15px;
-        }
-
-    
 
     /* background hebergement blanc et ombrage des etiquettes de hebergements */
 
@@ -591,7 +628,7 @@ Grands écrans d'ordinateurs et télévisions
     .hebergement {
         width: 100%;
         margin-bottom: 20px;
-        box-shadow: 10px 10px 5px rgb(196, 196, 196);
+        box-shadow: 5px 5px 5px #DDD;
     }
 
     /* faire passer les populaires avant les hebergements */
@@ -601,46 +638,32 @@ Grands écrans d'ordinateurs et télévisions
     }
 
 
- .colonne_activites {
-     width: 100%
- }   
 
- .activites h2 {
-     padding-left: 10%; /* a verifier */
- }   
-
- /* suppression padding de activites */
- .colonne_activites {
-     padding: 0px;
-     margin: 10px;
+.activites {
+    width: 94%;
+    padding-left: 3%;
+    padding-right: 3%;
  }
 
-/*
-    header, main {
-        padding-left: 0px;
-        padding-right: 0px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-*/
+ .colonne_activites {
+     width: 100%;
+ }
+
+  .colonnes_activites div  {
+      padding-left: 0% ;
+      padding-right: 0%
+  }
 
 
-
-.colonne_populaires {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-}
     /* les tailles d'images des activités sont les memes que pour les populaires     */
     .activite_format1 img , .activite_format2 img , .activite_format3 img {
         width: 100%;
         height: 135px;
     }
-    .populaire {
-		margin-bottom : 30px;
-	}
 
+    .footer_class {
+        margin-left:25px;
+    }
     .footer-item {
         width: 100%;
     }
