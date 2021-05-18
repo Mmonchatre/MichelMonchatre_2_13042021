@@ -11,7 +11,7 @@ body
     margin: 0px; /* pour suppression decalage de 8px par defaut du header */
 }
 
-header nav, main, .footer_class  {
+header, main, .footer_class  {
     max-width:1200px;  /* 1200 = conseil mentor */
     margin: 0 auto;
     padding-left: 8px;
