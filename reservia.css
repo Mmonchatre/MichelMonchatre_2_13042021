@@ -32,13 +32,12 @@ a:visited {
 }
 
 main { 
-    padding-top: 80px
+    margin-top: 100px
 }
 
 
 /*header */
 header {
-    box-sizing: border-box; /* pas sur que c'est utile */
     font-weight:500; 
     font-size: 17px;
     width:100%;
@@ -77,7 +76,7 @@ header nav ul {
     align-items: center;
     padding-left: 30px;
     padding-right: 30px;
-    border-top: 3px solid transparent;
+    border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
 }
 
@@ -86,6 +85,8 @@ a.inscrire {
     margin-left: 30px;
     font-weight: 700;
     color:#0065FC;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
 }
 
 #header_menu li:hover {
@@ -271,7 +272,6 @@ a.inscrire {
     margin-bottom: 30px;
 }
 
-
 .hebergements {
     max-width: 57%;
     position: relative;
@@ -286,7 +286,6 @@ a.inscrire {
     flex-wrap: wrap;
     justify-content: space-between;
     }
-
 
 .hebergements h2 {
     width: 100%;
@@ -409,18 +408,9 @@ a.inscrire {
     flex-direction: column;
     flex-wrap: wrap;
     width: 23%;
-    padding: 10px;
     justify-content: space-between;
 }
 
-.colonnes_activites div:first-child {
-    padding-left : 0px;
-}
-
-.colonnes_activites div:last-child {
-    padding-right : 0px;
-}
- 
 .activite_format1 a, .activite_format2 a, .activite_format3 a, .activite_format4 a{
     display: flex;
     flex-direction: column;
@@ -436,8 +426,6 @@ a.inscrire {
     height: 30px;
     margin: 10px 5px 0px 10px;
 }
-
-
 
 .activites img {
     object-fit: cover;
@@ -489,38 +477,59 @@ footer {
 
 /*  rappel des breaking-points :
 
-Les très petits écrans (< 768 px : pour les écrans dont la largeur est comprise entre 0 px et 768 px)
+très petits écrans (< 768 px : pour les écrans dont la largeur est comprise entre 0 px et 768 px)
 Tablettes (768 px - 991 px)
 Ordinateurs (992 px - 1199 px)
 Grands écrans d'ordinateurs et télévisions
 
 */
 
-@media screen and (max-width: 767px) {
 
-    .hebergements, .populaires, .activites {
-        max-width: 100%;
+@media screen and (max-width: 991px) {
+
+    .hebergements_et_activites {
+        flex-direction: column;
+    }
+
+    .hebergements, .populaires {
+        padding-left: 3%;
+        padding-right: 3%;
+        max-width: 94%;
         width : 100%;
     }
 
-    #bandeau_filtre, .footer_class { 
-        flex-direction: column;
-        align-items: flex-start;
+    .populaire {
+        width: 30% ;
+        margin:0
     }
-        
+
+    .colonne_populaires {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .colonne_activites {
+        width : 46%;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+
+
+    main {
+        margin-top: 160px
+    }
+ 
+
     header nav, main, .footer_class {
         padding: 0
     }
 
-    main {
-        padding-top: 160px
-    }
- 
-  
     /* dans le header : premiere ligne  logo et "s'inscrire" ; deuxieme = navigation */
 
     header  {
-        width: 100%;
+        /* width: 100%; */
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
@@ -545,7 +554,7 @@ Grands écrans d'ordinateurs et télévisions
     header nav ul {
 
         padding: 0px;
-    
+
     }
 
     a.inscrire {
@@ -555,9 +564,8 @@ Grands écrans d'ordinateurs et télévisions
     header nav #logo {
         padding-left: 3%;
     }
-    
 
-    /* trait sous le menu nav */
+    /* modifs traits menu nav */
     #header_menu li {
         width: 50%;
         text-align: center;
@@ -573,29 +581,41 @@ Grands écrans d'ordinateurs et télévisions
         border-bottom : 5px solid #0065FC;
     }
 
+   .colonne_populaires, .activites {
+    flex-direction: column;
+    max-width: 100%;
+        width : 100%;
+    }
 
+    .populaire { 
+        width : 100%;        
+    }
+
+    #bandeau_filtre, .footer_class { 
+        flex-direction: column;
+        align-items: flex-start;
+    }
+        
     
-/* dans le champ recherche , changer le mot rechercher par la loupe avec encadrement radius */
-.champ_recherche button {
-    display: none;}   
+    /* dans le champ recherche , changer le mot "rechercher" par la loupe */
+    .champ_recherche button {
+        display: none;}   
 
-.champ_recherche .loupe_recherche {
-    display:contents;
-    display: flex;
-    background-color: #0065FC;
-    border-radius: 15px  ; 
+    .champ_recherche .loupe_recherche {
+        display:contents;
+        display: flex;
     }
 
     .input_recherche {
         width: 100%
     }
+
     .recherche {
         margin: 25px;
     }
     
     .bouton_filtre {
     margin: 5px 0px;
-    
     }
     
     .champ_recherche {
@@ -603,21 +623,21 @@ Grands écrans d'ordinateurs et télévisions
         margin: 20px    auto;
     }
 
-/* ancrage navigation hebergements et activites */
-#hebergements, #activites {
-    top: -160px;
-}
+    /* ancrage navigation hebergements et activites */
+    #hebergements, #activites {
+        top: -160px;
+    }
 
 
-/*centrage des images */
+    /*centrage des images */
 
-#colonnes_activites, .hebergements  {
-    justify-content: space-around;    
-} 
+    #colonnes_activites, .hebergements  {
+        justify-content: space-around;    
+    } 
 
-.populaires {
-    border-radius: 0;
-}
+    .populaires {
+        border-radius: 0;
+    }
 
 
     /* background hebergement blanc et ombrage des etiquettes de hebergements */
@@ -633,37 +653,35 @@ Grands écrans d'ordinateurs et télévisions
 
     /* faire passer les populaires avant les hebergements */
 
-     .hebergements_et_activites .hebergements {
+    .hebergements_et_activites .hebergements {
         order: 2;
     }
 
+    .activites {
+        width: 94%;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
 
+    .colonne_activites {
+        width: 100%;
+    }
 
-.activites {
-    width: 94%;
-    padding-left: 3%;
-    padding-right: 3%;
- }
+    .colonnes_activites div  {
+        padding-left: 0% ;
+        padding-right: 0%
+    }
 
- .colonne_activites {
-     width: 100%;
- }
-
-  .colonnes_activites div  {
-      padding-left: 0% ;
-      padding-right: 0%
-  }
-
-
-    /* les tailles d'images des activités sont les memes que pour les populaires     */
     .activite_format1 img , .activite_format2 img , .activite_format3 img {
         width: 100%;
         height: 135px;
     }
 
     .footer_class {
-        margin-left:25px;
+        padding-left: 3%;
+        padding-right: 3%;
     }
+
     .footer-item {
         width: 100%;
     }
