@@ -186,9 +186,9 @@ a.inscrire {
 /* section filtres */
 
 .libelle_filtre {
-	font-size: 20px;
-    margin-left: 15px;
-    margin-right: 20px;
+	font-size: 18px;
+    margin-left: 8px;
+    margin-right: 8px;
 }
 
 .libelle_images {
@@ -618,7 +618,7 @@ Grands écrans d'ordinateurs et télévisions
     }
 
     .recherche {
-        margin: 25px;
+        margin: 20px;
     }
     
     .bouton_filtre {
