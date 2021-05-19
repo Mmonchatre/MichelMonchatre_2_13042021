@@ -8,7 +8,7 @@ body
 {
     color: black;
     font-size: 15px;
-    margin: 0px; /* pour suppression decalage de 8px par defaut du header */
+    margin: 0px; /* pour suppression decalage de 8px par defaut du navigateur  */
 }
 
 
@@ -591,10 +591,17 @@ Grands écrans d'ordinateurs et télévisions
         width : 100%;        
     }
 
-    #bandeau_filtre, .footer_class { 
+    /* #bandeau_filtre { 
         flex-direction: column;
         align-items: flex-start;
     }
+    */
+
+    .titres_filtres {
+        width:100%
+    }
+
+ 
         
     
     /* dans le champ recherche , changer le mot "rechercher" par la loupe */
@@ -615,7 +622,7 @@ Grands écrans d'ordinateurs et télévisions
     }
     
     .bouton_filtre {
-    margin: 5px 0px;
+    margin: 5px 10px 5px 0px    ;
     }
     
     .champ_recherche {
